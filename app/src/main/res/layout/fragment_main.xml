@@ -47,7 +47,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="#A81111"
-                        android:padding="5dp">
+                        android:padding="7dp">
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="match_parent"
@@ -102,7 +102,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#A81111"
-                        android:padding="5dp"
+                        android:padding="7dp"
                         android:layout_weight="1">
 
                         <de.hdodenhof.circleimageview.CircleImageView
@@ -169,7 +169,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="#A81111"
-                        android:padding="5dp">
+                        android:padding="7dp">
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="match_parent"
@@ -224,7 +224,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#A81111"
-                        android:padding="5dp"
+                        android:padding="7dp"
                         android:layout_weight="1">
 
                         <de.hdodenhof.circleimageview.CircleImageView
@@ -291,7 +291,7 @@
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="#A81111"
-                        android:padding="5dp">
+                        android:padding="7dp">
 
                         <de.hdodenhof.circleimageview.CircleImageView
                             android:layout_width="match_parent"
@@ -346,7 +346,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="#A81111"
-                        android:padding="5dp"
+                        android:padding="7dp"
                         android:layout_weight="1">
 
                         <de.hdodenhof.circleimageview.CircleImageView
