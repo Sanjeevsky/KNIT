@@ -1,13 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
 
+        >
+        <item
+            android:title="Director's Desk"
+            android:icon="@drawable/knitlogo"
+            android:id="@+id/director_id" />
+        <item
+            android:title="Adminstration"
+            android:id="@+id/adminstration_id"
+
+            />
+        <item
+            android:title="Departments"
+            android:id="@+id/department_id"/>
+        <item
+            android:title="Faculty"
+            android:id="@+id/faculty_id"/>
+        <item
+            android:title="Login"
+            android:id="@+id/login_id"/>
 
     </group>
-<item android:title="subheader">
+<item android:title="Technical Support">
 
     <menu>
-
+        <item
+            android:title="Ashish Kumar CSE"
+            android:icon="@drawable/knitlogo"
+            android:id="@+id/developers1_id"
+            />
+        <item
+            android:title="Sanjeev Kumar CSE"
+            android:icon="@drawable/knitlogo"
+            android:id="@+id/developers2_id"
+            />
 
 
     </menu>
