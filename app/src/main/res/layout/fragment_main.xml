@@ -40,6 +40,9 @@
                     android:layout_height="match_parent"
                     android:gravity="center"
                     android:background="#A81111"
+                    android:layout_margin="5dp"
+                    app:cardCornerRadius="6dp"
+                    app:cardElevation="9dp">
                     android:orientation="vertical">
 
                     <LinearLayout
