@@ -1,251 +1,269 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AdminstrationActivity">
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:id="@+id/toolbar_id"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:background="@drawable/theme"
-        >
-
+        android:layout_below="@id/toolbar_id">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:id="@+id/layout1">
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:background="@drawable/knitlogo"
-                android:layout_gravity="center"
-                android:id="@+id/image_logo"/>
-            <TextView
+            android:background="@drawable/theme"
+            android:padding="10dp"
+            >
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Adminstration"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginBottom="15dp"
-                android:textSize="18dp"
-                android:textStyle="bold"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="The Institute is an Autonomous Statutory Organization registered under Societies Registration Act of Uttar Pradesh. It is fully financially and administratively controlled by the U.P. Government. The affairs of the Institute are centrally managed by the Board of Governors (BOG) with Hon’ble Minister of Technical Education, U.P. as the Chairman. There are different Committees such as Finance Committee, Administrative Committee, Academic Committee, Purchase Committee, and Building And Works Committee etc to assist the BOG in administering the the Institute. The academic matters of Students are governed by A.K.T.U, Lucknow. Director is Head of the Institute who is assisted by Professors and officers in various capacities in running the affairs of the Institute.
+                android:orientation="vertical"
+                android:id="@+id/layout1">
+                <ImageView
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:background="@drawable/knitlogo"
+                    android:layout_gravity="center"
+                    android:id="@+id/image_logo"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Administration"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginBottom="15dp"
+                    android:textSize="18dp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text="The Institute is an Autonomous Statutory Organization registered under Societies Registration Act of Uttar Pradesh. It is fully financially and administratively controlled by the U.P. Government. The affairs of the Institute are centrally managed by the Board of Governors (BOG) with Hon’ble Minister of Technical Education, U.P. as the Chairman. There are different Committees such as Finance Committee, Administrative Committee, Academic Committee, Purchase Committee, and Building And Works Committee etc to assist the BOG in administering the the Institute. The academic matters of Students are governed by A.K.T.U, Lucknow. Director is Head of the Institute who is assisted by Professors and officers in various capacities in running the affairs of the Institute.
 "/>
 
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/layout2"
+                android:layout_below="@id/layout1"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="Chairman Board of Governors"
+                            android:textSize="14dp"
+                            android:layout_width="match_parent"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:layout_weight="2"
+                            android:layout_height="match_parent"
+                            android:text="Er. V.K. Mishra"
+                            android:textSize="14dp"
+                            android:layout_width="match_parent"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Vice Chairman Board of Governors"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="Principal Secretary"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="Director"
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="2"
+                            android:layout_height="match_parent"
+                            android:text="Prof. J.P. Pandey"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="Registrar "
+                            android:textColor="@android:color/black"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="2"
+                            android:text="Sri S C Bhatt"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="Dy. Registrar "
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="2"
+                            android:layout_height="match_parent"
+                            android:text="Shri S.C. Bhatt"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="	Finance And Accounts Officer "
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="2"
+                            android:layout_height="match_parent"
+                            android:text="Shri C. M Shukla"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:text="Assistant Registrar "
+                            android:textColor="@android:color/black"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_weight="2"
+                            android:layout_height="match_parent"
+                            android:text="Shri S.K. Srivastava"
+                            android:textColor="@android:color/black"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+
+
+
+
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:id="@+id/layout2"
-            android:layout_below="@id/layout1"
-            android:layout_marginTop="20dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:text="Chairman Board of Governors"
-                        android:textSize="14dp"
-                        android:layout_width="match_parent"
-                        android:textColor="@android:color/black"/>
-                    <TextView
-                        android:layout_weight="2"
-                        android:layout_height="match_parent"
-                        android:text="Er. V.K. Mishra"
-                        android:textSize="14dp"
-                        android:layout_width="match_parent"
-                        android:textColor="@android:color/black"/>
-                </LinearLayout>
 
 
 
-            </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="1"
-                        android:text="Vice Chairman Board of Governors"
-                        android:textColor="@android:color/black"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:text="Principal Secretary"
-                        android:textColor="@android:color/black"/>
-                </LinearLayout>
+    </ScrollView>
 
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:text="Director"
-                        android:textColor="@android:color/black"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_weight="2"
-                        android:layout_height="match_parent"
-                        android:text="Prof. J.P. Pandey"
-                        android:textColor="@android:color/black"/>
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:text="Registrar "
-                        android:textColor="@android:color/black"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:layout_weight="2"
-                        android:text="Sri S C Bhatt"
-                        android:textColor="@android:color/black"/>
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:text="Dy. Registrar "
-                        android:textColor="@android:color/black"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_weight="2"
-                        android:layout_height="match_parent"
-                        android:text="Shri S.C. Bhatt"
-                        android:textColor="@android:color/black"/>
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:text="	Finance And Accounts Officer "
-                        android:textColor="@android:color/black"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_weight="2"
-                        android:layout_height="match_parent"
-                        android:text="Shri C. M Shukla"
-                        android:textColor="@android:color/black"/>
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_weight="1"
-                        android:layout_height="match_parent"
-                        android:text="Assistant Registrar "
-                        android:textColor="@android:color/black"/>
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_weight="2"
-                        android:layout_height="match_parent"
-                        android:text="Shri S.K. Srivastava"
-                        android:textColor="@android:color/black"/>
-                </LinearLayout>
-
-
-
-            </LinearLayout>
-
-
-
-        </LinearLayout>
-
-
-
-
-
-
-
-
-    </LinearLayout>
-
-
-</ScrollView>
+</RelativeLayout>

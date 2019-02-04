@@ -27,6 +27,8 @@ public class webview_acticity extends AppCompatActivity {
 
         toolbar= findViewById(R.id.toolbar_id);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         webView = findViewById(R.id.webview_id);
         progressBar = findViewById(R.id.progressbar_id);
         myWebClient webclient = new myWebClient();
