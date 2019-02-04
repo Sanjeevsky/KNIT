@@ -1,5 +1,6 @@
 package com.example.sanjeevyadav.knit;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -56,6 +57,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         int id=item.getItemId();
         switch(id)
         {
+            case R.id.director_id:
+                Intent dirInent=new Intent(MainActivity.this,DirectorActivity.class);
+                startActivity(dirInent);
+                break;
+
+            case R.id.adminstration_id:
+                Intent adminInent=new Intent(MainActivity.this,AdminstrationActivity.class);
+                startActivity(adminInent);
+                break;
 
         }
         drawerLayout.closeDrawer(GravityCompat.START);
