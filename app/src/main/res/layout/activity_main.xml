@@ -19,8 +19,9 @@
         android:layout_height="30dp"
         android:id="@+id/tabLayout_id"
         android:layout_below="@id/toolbar_id"
+        android:textAlignment="center"
         android:background="@color/colorPrimary"
-        app:tabMode="fixed"
+        app:tabSelectedTextColor="#03A9F4"
         app:tabGravity="fill"
         app:tabTextColor="#ffff"/>
 
