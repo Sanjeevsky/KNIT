@@ -1,14 +1,19 @@
 package com.example.sanjeevyadav.knit;
 
+import android.app.DownloadManager;
+import android.net.Uri;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 import android.graphics.Bitmap;
+import android.widget.Toast;
 
 public class webview_acticity extends AppCompatActivity {
 
@@ -28,7 +33,32 @@ public class webview_acticity extends AppCompatActivity {
         webView = findViewById(R.id.webview_id);
         progressBar = findViewById(R.id.progressbar_id);
         progressBar.setMax(100);
-        webView.loadUrl("http://knit.ac.in/result_1.htm");
+        Bundle bundle=getIntent().getExtras();
+        if(bundle.getString("url")!=null)
+        {
+            String url=bundle.getString("url");
+            webView.loadUrl(url);
+        }
+        else{
+            final String pdf=bundle.getString("pdf");
+            //Toast.makeText(webview_acticity.this,"pdfweb  "+pdf,Toast.LENGTH_LONG).show();
+            webView.loadUrl(pdf);
+            webView.setDownloadListener(new DownloadListener() {
+                @Override
+                public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
+                    DownloadManager.Request myrequest = new DownloadManager.Request(Uri.parse(url));
+                    myrequest.allowScanningByMediaScanner();
+                    myrequest.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                    myrequest.setDestinationInExternalFilesDir(webview_acticity.this,
+                    Environment.DIRECTORY_DOWNLOADS,".pdf");
+                    DownloadManager mymanager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
+                    mymanager.enqueue(myrequest);
+                    Toast.makeText(webview_acticity.this,"Your File Is Downloading",Toast.LENGTH_LONG).show();
+                }
+            });
+
+        }
+        //Toast.makeText(webview_acticity.this,url,Toast.LENGTH_LONG).show();
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
