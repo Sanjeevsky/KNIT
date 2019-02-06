@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "984830893273",
+    "firebase_url": "https://knit-app-94130.firebaseio.com",
+    "project_id": "knit-app-94130",
+    "storage_bucket": "knit-app-94130.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984830893273:android:4bc4bbb1b01439d0",
+        "android_client_info": {
+          "package_name": "com.example.sanjeevyadav.knit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "984830893273-l9g8rqt00q96pgp33oapp4oa55hftjaf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sanjeevyadav.knit",
+            "certificate_hash": "aaa42131e7bc96f25f4b65735a113cd2da2c3284"
+          }
+        },
+        {
+          "client_id": "984830893273-70a33j7m0mf3cnf0tnakiimpicgh621p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sanjeevyadav.knit",
+            "certificate_hash": "6bda3b61d47b475956745c6209d5bb38b042884f"
+          }
+        },
+        {
+          "client_id": "984830893273-gahap661dc6t3jr1p6oog2i9p8de0u54.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7uu7XmshVbz57-JOmgC63uI1FZVV1muI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "984830893273-gahap661dc6t3jr1p6oog2i9p8de0u54.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 
 public class MainFragment extends Fragment {
 
-    private CardView resCard,aboutCard;
+    private CardView resCard,aboutCard,studentCard;
         public MainFragment() {
         }
         View view;
@@ -31,11 +31,12 @@ public class MainFragment extends Fragment {
         super.onStart();
         resCard=view.findViewById(R.id.result_cardview_id);
         aboutCard=view.findViewById(R.id.about_cardview_id);
+        studentCard=view.findViewById(R.id.studnets_cardview_id);
         resCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent resultIntent=new Intent(getContext(),webview_acticity.class);
-                startActivity(resultIntent);
+//                Intent resultIntent=new Intent(getContext(),webview_acticity.class);
+//                startActivity(resultIntent);
             }
         });
         aboutCard.setOnClickListener(new View.OnClickListener() {
@@ -44,6 +45,14 @@ public class MainFragment extends Fragment {
                 Intent aboutIntent=new Intent(getContext(),AboutUsActivity.class);
                 startActivity(aboutIntent);
 
+            }
+        });
+
+        studentCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent studentIntent=new Intent(getContext(),StudentActivity.class);
+                startActivity(studentIntent);
             }
         });
 
