@@ -116,17 +116,17 @@ public class AboutUsActivity extends AppCompatActivity {
                 "applying through a prescribed form which is to be recommended by Dean Students Welfare. The norms for the issuance of\n" +
                 "books/journal are as follows.<br/><br>\n" +
                 "    <p><strong>1. Limit of Books: </strong><br>\n" +
-                "  B.Tech. I &amp; II Year -------------------- 5 Books for 30 days<br>\n" +
+                "  B.Tech. I &amp; II Year -------- 5 Books for 30 days<br>\n" +
                 "  \n" +
-                "  B. Tech. III Year ----------------------- 5 Books for 30 days<br>\n" +
+                "  B. Tech. III Year ---------- 5 Books for 30 days<br>\n" +
                 " \n" +
-                "  B.Tech. IV Year ----------------------- 5 Books for 30 days<br>\n" +
+                "  B.Tech. IV Year ----------- 5 Books for 30 days<br>\n" +
                 "  \n" +
-                "  M.Tech. (part time) &amp; MCA ----- 5 Books for 30 days<br><br>\n" +
+                "  M.Tech. (part time) &amp; MCA -- 5 Books for 30 days<br><br>\n" +
                 "  \n" +
                 "    <strong>2. Issue Hours for Library Books: </strong><br>\n" +
                 "  \n" +
-                "    Monday to Saturday ------ 11.30 A.M. to 1.00 P.M. &amp; 2.00 P.M. to 4.30. P.M<br><br>\n" +
+                "    Monday to Saturday :- 11.30 A.M. to 1.00 P.M. &amp; 2.00 P.M. to 4.30. P.M<br><br>\n" +
                 " \n" +
                 "    <strong>3. Overdue Charges: </strong><br>\n" +
                 "  \n" +

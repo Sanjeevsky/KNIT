@@ -34,7 +34,7 @@ public class MainFragment extends Fragment {
         resCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent resultIntent=new Intent(getContext(),webview_acticity.class);
+                Intent resultIntent=new Intent(getContext(),ResultActivity.class);
                 startActivity(resultIntent);
             }
         });
@@ -43,7 +43,6 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 Intent aboutIntent=new Intent(getContext(),AboutUsActivity.class);
                 startActivity(aboutIntent);
-
             }
         });
 

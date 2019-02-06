@@ -14,7 +14,7 @@ import java.util.List;
 public class recycler_adapter extends RecyclerView.Adapter<viewHolder> {
 
     private List<DataHold> data;
-    Context context;
+    private Context context;
 
     public recycler_adapter(List<DataHold> data, Context context) {
         this.data = data;
@@ -36,8 +36,6 @@ public class recycler_adapter extends RecyclerView.Adapter<viewHolder> {
         holder.datashow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Toast.makeText(context,"Clicked",Toast.LENGTH_LONG).show();
-                //Toast.makeText(context,dataHold.link,Toast.LENGTH_LONG).show();
                 Intent intent=new Intent(context,webview_acticity.class);
                 if(dataHold.type.equals("pdf"))
                 {
