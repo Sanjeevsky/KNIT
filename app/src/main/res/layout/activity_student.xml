@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StudentActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar_id"
+        android:background="@color/colorPrimary"
+        android:layout_marginBottom="10dp"
+        app:titleTextColor="#ffffff"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/toolbar_id">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/student_academics_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff0000"
+                android:drawableLeft="@drawable/dropdown"
+                android:elevation="10dp"
+                android:layout_marginBottom="5dp"
+                android:padding="15dp"
+                android:text="Student Academics Interface"
+                android:textColor="#fff"/>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/student_academics_btn"
+                android:background="#ffff"
+                app:ael_duration="400"
+                app:ael_expanded="false"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical"
+                android:layout_marginBottom="5dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click Here"
+                    android:background="#FA6767"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:id="@+id/button_id1"/>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+            <Button
+                android:id="@+id/update_student_profile"
+                android:layout_below="@id/expandableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff0000"
+                android:elevation="10dp"
+                android:drawableLeft="@drawable/dropdown"
+                android:padding="15dp"
+                android:text="Update Student's Profile"
+                android:layout_marginBottom="5dp"
+                android:textColor="#fff"/>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/update_student_profile"
+                android:background="#ffff"
+                android:layout_marginBottom="5dp"
+                app:ael_duration="400"
+                app:ael_expanded="false"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click Here"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:background="#FA6767"
+                    android:id="@+id/button_id2"/>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+            <Button
+                android:id="@+id/download_provisional_certi"
+                android:layout_below="@id/expandableLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff0000"
+                android:drawableLeft="@drawable/dropdown"
+                android:elevation="10dp"
+                android:padding="15dp"
+                android:layout_marginBottom="5dp"
+                android:text="Download Provisional Certificate"
+                android:textColor="#fff"/>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/download_provisional_certi"
+                android:background="#fff"
+                app:ael_duration="400"
+                app:ael_expanded="false"
+                app:ael_interpolator="accelerate"
+                android:layout_marginBottom="5dp"
+                app:ael_orientation="vertical">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Click Here"
+                    android:background="#FA6767"
+                    android:textSize="20dp"
+                    android:textColor="#fff"
+                    android:id="@+id/button_id3"/>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+            <Button
+                android:id="@+id/student_welfare"
+                android:layout_below="@id/expandableLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff0000"
+                android:layout_marginBottom="5dp"
+                android:drawableLeft="@drawable/dropdown"
+                android:elevation="10dp"
+                android:padding="15dp"
+
+                android:text="Student Welfare"
+                android:textColor="#fff"/>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/student_welfare"
+                android:background="#fff"
+                app:ael_duration="400"
+                android:layout_marginBottom="5dp"
+                app:ael_expanded="false"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14dp"
+                        android:background="#fff"
+                        android:id="@+id/text_id"/>
+
+                </ScrollView>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            <Button
+                android:id="@+id/student_bodies"
+                android:layout_below="@id/expandableLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ff0000"
+                android:drawableLeft="@drawable/dropdown"
+                android:elevation="10dp"
+                android:layout_marginBottom="5dp"
+                android:padding="10dp"
+                android:text="Student Bodies"
+                android:textColor="#fff"/>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/student_bodies"
+                android:background="#fff"
+                app:ael_duration="400"
+                app:ael_expanded="false"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical">
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_margin="2dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_marginTop="10dp"
+                            android:textSize="14dp"
+                            android:id="@+id/text_id1"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:src="@drawable/stu_bodies_01"
+                                android:id="@+id/img1"
+                                />
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:id="@+id/img2"
+                                android:src="@drawable/student_bodies_02"
+                                />
+
+                        </LinearLayout>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:id="@+id/text_id2"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/img3"
+                            android:src="@drawable/knit_boies"
+                            />
+
+
+                    </LinearLayout>
+
+
+                </ScrollView>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
