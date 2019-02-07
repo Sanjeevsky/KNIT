@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "984830893273-70a33j7m0mf3cnf0tnakiimpicgh621p.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sanjeevyadav.knit",
+            "certificate_hash": "6bda3b61d47b475956745c6209d5bb38b042884f"
+          }
+        },
+        {
           "client_id": "984830893273-gahap661dc6t3jr1p6oog2i9p8de0u54.apps.googleusercontent.com",
           "client_type": 3
         }
