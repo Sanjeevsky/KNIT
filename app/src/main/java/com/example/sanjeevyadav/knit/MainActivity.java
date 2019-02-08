@@ -67,6 +67,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(adminInent);
                 break;
 
+            case R.id.login_menu_id:
+                Intent LoginInent=new Intent(MainActivity.this,LoginIndexActivity.class);
+                startActivity(LoginInent);
+                break;
+
+
 
 
         }
