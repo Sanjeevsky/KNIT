@@ -80,6 +80,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(depratInent);
                 break;
 
+            case R.id.faculty_id:
+                Intent facultyIntent=new Intent(MainActivity.this,FacultyActivity.class);
+                startActivity(facultyIntent);
+                break;
+
         }
         drawerLayout.closeDrawer(GravityCompat.START);
 
