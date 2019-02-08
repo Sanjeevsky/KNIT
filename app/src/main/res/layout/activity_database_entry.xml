@@ -101,17 +101,12 @@
                                 android:textSize="24dp"
                                 android:id="@+id/submit_news_button"
                                 android:background="@drawable/login_draw_btn"/>
-                            <ScrollView
+                      
+                            <android.support.v7.widget.RecyclerView
                                 android:layout_width="match_parent"
-                                android:layout_height="match_parent"
-                                android:fillViewport="true"
-                                >
-                                <android.support.v7.widget.RecyclerView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:padding="5dp"
-                                    android:id="@+id/recyclerview_id_data"/>
-                            </ScrollView>
+                                android:layout_height="wrap_content"
+                                android:padding="5dp"
+                                android:id="@+id/recyclerview_id_data"/>
 
 
 
