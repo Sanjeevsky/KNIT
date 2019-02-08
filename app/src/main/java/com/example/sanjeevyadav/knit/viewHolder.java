@@ -11,5 +11,6 @@ public class viewHolder extends RecyclerView.ViewHolder {
     public viewHolder(@NonNull View itemView) {
         super(itemView);
         datashow=itemView.findViewById(R.id.textview_id_recycler_item);
+
     }
 }
