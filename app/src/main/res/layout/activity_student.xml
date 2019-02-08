@@ -22,12 +22,13 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
+            android:orientation="vertical"
+            android:padding="12dp">
             <Button
                 android:id="@+id/student_academics_btn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_button"
                 android:background="#ff0000"
                 android:drawableLeft="@drawable/dropdown"
                 android:elevation="10dp"
@@ -52,18 +53,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Click Here"
+                    android:background="@drawable/round_corner_button_for_clickhere"
                     android:background="#FA6767"
                     android:textSize="20dp"
                     android:textColor="#fff"
                     android:id="@+id/button_id1"/>
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
-
             <Button
                 android:id="@+id/update_student_profile"
                 android:layout_below="@id/expandableLayout1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:background="@drawable/round_corner_button"
                 android:background="#ff0000"
                 android:elevation="10dp"
                 android:drawableLeft="@drawable/dropdown"
@@ -90,9 +92,10 @@
                     android:text="Click Here"
                     android:textSize="20dp"
                     android:textColor="#fff"
-                    android:background="#FA6767"
+                    android:background="@drawable/round_corner_button_for_clickhere"
                     android:id="@+id/button_id2"/>
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
 
 
             <Button
@@ -100,7 +103,7 @@
                 android:layout_below="@id/expandableLayout2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#ff0000"
+                android:background="@drawable/round_corner_button"
                 android:drawableLeft="@drawable/dropdown"
                 android:elevation="10dp"
                 android:padding="15dp"
@@ -124,7 +127,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Click Here"
-                    android:background="#FA6767"
+                    android:background="@drawable/round_corner_button_for_clickhere"
+
                     android:textSize="20dp"
                     android:textColor="#fff"
                     android:id="@+id/button_id3"/>
@@ -136,12 +140,12 @@
                 android:layout_below="@id/expandableLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#ff0000"
+
+                android:background="@drawable/round_corner_button"
                 android:layout_marginBottom="5dp"
                 android:drawableLeft="@drawable/dropdown"
                 android:elevation="10dp"
                 android:padding="15dp"
-
                 android:text="Student Welfare"
                 android:textColor="#fff"/>
 
@@ -159,13 +163,21 @@
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textSize="14dp"
-                        android:background="#fff"
-                        android:id="@+id/text_id"/>
 
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="20dp"
+                        app:cardCornerRadius="5dp">
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14dp"
+                            android:layout_marginTop="10dp"
+                            android:background="#fff"
+                            android:id="@+id/text_id"/>
+
+                    </android.support.v7.widget.CardView>
                 </ScrollView>
 
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
@@ -175,7 +187,8 @@
                 android:layout_below="@id/expandableLayout4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#ff0000"
+                android:background="@drawable/round_corner_button"
+
                 android:drawableLeft="@drawable/dropdown"
                 android:elevation="10dp"
                 android:layout_marginBottom="5dp"
@@ -196,6 +209,54 @@
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+                    <android.support.v7.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:elevation="20dp"
+                        app:cardCornerRadius="5dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:layout_margin="2dp">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="20dp"
+                                android:textSize="14dp"
+                                android:id="@+id/text_id1"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/stu_bodies_01"
+                                    android:id="@+id/img1" />
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:id="@+id/img2"
+                                    android:src="@drawable/student_bodies_02" />
+
+                            </LinearLayout>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14dp"
+                                android:id="@+id/text_id2"/>
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/img3"
+                                android:src="@drawable/knit_boies" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -241,20 +302,13 @@
 
 
                     </LinearLayout>
-
-
                 </ScrollView>
 
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
-
-
-
         </RelativeLayout>
 
-
     </ScrollView>
-
-
-
+        </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>

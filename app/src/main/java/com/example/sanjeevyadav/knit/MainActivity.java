@@ -67,13 +67,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 startActivity(adminInent);
                 break;
 
+            case R.id.contacts_id:
+                Intent contInent=new Intent(MainActivity.this,ContactsActivity.class);
+                startActivity(contInent);
+                break;
             case R.id.login_menu_id:
                 Intent LoginInent=new Intent(MainActivity.this,LoginIndexActivity.class);
                 startActivity(LoginInent);
                 break;
-
-
-
+            case R.id.department_id:
+                Intent depratInent=new Intent(MainActivity.this,DepartmentsActivity.class);
+                startActivity(depratInent);
+                break;
 
         }
         drawerLayout.closeDrawer(GravityCompat.START);

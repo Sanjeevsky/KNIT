@@ -7,8 +7,8 @@
     android:id="@+id/drawer_id"
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
-    <include layout="@layout/activity_main"
-        />
+
+    <include layout="@layout/activity_main" />
 
    <android.support.design.widget.NavigationView
        app:itemTextColor="#ffffff"
@@ -21,13 +21,6 @@
        app:headerLayout="@layout/navigation_header"
        app:menu="@menu/navigation_menu"
        android:background="#D32F2F"
-       android:textAlignment="inherit"
-       />
-
-
-
-
-
-
+       android:textAlignment="inherit" />
 
 </android.support.v4.widget.DrawerLayout>
