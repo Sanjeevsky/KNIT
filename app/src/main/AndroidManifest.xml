@@ -17,6 +17,9 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".ContactsActivity"
             android:parentActivityName=".MainActivity"/>
+        <activity android:name=".DatabaseEntryActivity"/>
+        <activity android:name=".AdminLoginActivity" />
+        <activity android:name=".LoginIndexActivity" />
         <activity
             android:name=".StudentActivity"
             android:parentActivityName=".MainActivity" />
@@ -40,6 +43,7 @@
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
     </application>
 

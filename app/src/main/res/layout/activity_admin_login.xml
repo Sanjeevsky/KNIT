@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AdminLoginActivity">
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/knitlogo"
+            android:id="@+id/knit_logo"
+            android:layout_centerHorizontal="true"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:hint="Enter User Name"
+            android:id="@+id/login_username"
+            android:layout_marginTop="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:paddingStart="25dp"
+            android:background="@drawable/edibutton"
+            android:layout_below="@id/knit_logo"
+            />
+        <EditText
+            android:layout_width="match_parent"
+
+            android:hint="Enter User Password"
+            android:inputType="textPassword"
+            android:background="@drawable/edibutton"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/login_user_password"
+            android:paddingStart="25dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+
+            android:layout_below="@id/login_username"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:id="@+id/login_btn"
+            android:text="Login"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/login_draw_btn"
+            android:textColor="#fff"
+            android:layout_below="@id/login_user_password"/>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

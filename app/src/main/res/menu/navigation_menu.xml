@@ -19,7 +19,8 @@
             android:title="Contacts"/>
         <item
             android:title="Login"
-            android:id="@+id/login_id"/>
+            android:id="@+id/login_menu_id"/>
+
     </group>
 <item android:title="Technical Support">
 
