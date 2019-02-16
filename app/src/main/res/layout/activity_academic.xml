@@ -180,7 +180,393 @@
                 </android.support.v7.widget.CardView>
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/coursestudy_button_id"
+                android:drawableLeft="@drawable/dropdown"
+                android:background="@drawable/round_corner_button"
+                android:textColor="#fff"
+                android:elevation="10dp"
+                android:layout_below="@id/expandablelayout3_academic"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Course of Study"/>
 
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/expandablelayout4_academic"
+                android:background="#ffff"
+                app:ael_duration="400"
+                android:layout_below="@+id/coursestudy_button_id"
+                app:ael_expanded="false"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical"
+                android:layout_marginBottom="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="20dp"
+                    android:padding="10dp"
+                    app:cardCornerRadius="5dp">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true">
+                        <HorizontalScrollView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/coursestudylayout_id">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="#fff"
+                                    android:id="@+id/courselayout_id"
+                                    android:layout_marginBottom="20dp"
+                                    android:text="The Institute offers the following courses under semester system:"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:id="@+id/courselayout2_id"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_below="@id/courselayout_id">
+                                    <TableLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp">
+                                            <TextView
+                                                android:text="(A) UNDERGRADUATE PROGRAMMES (B.TECH.) (4 YEARS / 8 SEMESTERS)"
+                                                android:textColor="#5F0D0D"
+                                                android:textStyle="bold" />
+                                        </TableRow>
+                                    </TableLayout>
+                                    <TableLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:stretchColumns="*"
+                                        android:orientation="vertical"
+                                        android:padding="5dip"
+                                        android:divider="?android:attr/dividerHorizontal"
+                                        android:showDividers="middle">
+
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Branch"
+                                                android:textColor="#131212"
+                                                android:paddingRight="7dp"
+                                                android:textStyle="bold" />
+                                            <TextView
+                                                android:text="Sanctioned Intake"
+                                                android:paddingLeft="4dp"
+                                                android:textColor="#131212"
+                                                android:paddingRight="7dp"
+                                                android:textStyle="bold" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Civil Engineering"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="60*+6**"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Computer Science &amp; Engineering"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="60*+6**"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Electrical Engineering"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="60*+6**"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Electronics Engineering"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="60*+6**"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Mechanical Engineering"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="60*+6**"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Information Technology"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="40*+4**"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Total"
+                                                android:textStyle="bold"
+                                                android:textColor="#131212"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="340*+34**"
+                                                android:paddingLeft="4dp"
+                                                android:textStyle="bold"
+                                                android:textColor="#131212"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                    </TableLayout>
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/courselayout2_id"
+                                    android:id="@+id/courselayout3_id"
+                                    android:layout_marginBottom="10dp"/>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginBottom="20dp"
+                                    android:id="@+id/courselayout4_id"
+                                    android:layout_below="@id/courselayout3_id">
+                                    <TableLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginBottom="20dp"
+                                            android:layout_marginRight="3dp">
+                                            <TextView
+                                                android:text="(B) MASTER OF COMPUTER APPLICATION (M.C.A.)- (3 YEARS / 6 SEMESTERS)   :   60"
+                                                android:textColor="#5F0D0D"
+                                                android:textStyle="bold" />
+                                        </TableRow>
+                                    </TableLayout>
+                                    <TableLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp">
+                                            <TextView
+                                                android:text="(C) M.TECH. (FULL TIME) 4  SEMESTERS (10 GENERAL + 5 SPONSORED + 3 SC/ST)"
+                                                android:textColor="#5F0D0D"
+                                                android:textStyle="bold" />
+                                        </TableRow>
+                                    </TableLayout>
+                                    <TableLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:stretchColumns="*"
+                                        android:orientation="vertical"
+                                        android:padding="5dip"
+                                        android:divider="?android:attr/dividerHorizontal"
+                                        android:showDividers="middle">
+
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Civil Engineering\n(Geotechnical &amp; Geoenvironmental Engineering)"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="18"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp"/>
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Computer Science &amp; Engineering"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="18"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Electrical Engineering\n(Power Electronics &amp; Drives)"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="18"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Mechanical Engineering\n(Thermal Engineering)"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="18"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                    </TableLayout>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginBottom="20dp"
+                                    android:id="@+id/courselayout5_id"
+                                    android:layout_below="@id/courselayout4_id">
+                                    <TableLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp">
+                                            <TextView
+                                                android:text="(D) M.TECH (PART TIME) 6 SEMESTERS (10 GEN. + 3 SC/ST)"
+                                                android:textColor="#5F0D0D"
+                                                android:textStyle="bold" />
+                                        </TableRow>
+                                    </TableLayout>
+                                    <TableLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:stretchColumns="*"
+                                        android:orientation="vertical"
+                                        android:padding="5dip"
+                                        android:divider="?android:attr/dividerHorizontal"
+                                        android:showDividers="middle">
+
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Civil Engineering\n(Geotechnical Engineering/Water Resources Engineering)"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="13"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp"/>
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Electrical Engineering\n(Solid State Controls/Power Systems)"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="13"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Mechanical Engineering\n(Machine Desing/Industrial Systems Engineering)"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="13"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                        <TableRow
+                                            android:paddingRight="3dp"
+                                            android:layout_marginRight="3dp"
+                                            android:divider="?android:attr/dividerVertical"
+                                            android:showDividers="middle">
+                                            <TextView
+                                                android:text="Electronics Engineering(Digital Electronics &amp; Systems)"
+                                                android:paddingRight="7dp" />
+                                            <TextView
+                                                android:text="13"
+                                                android:paddingLeft="4dp"
+                                                android:paddingRight="7dp" />
+                                        </TableRow>
+                                    </TableLayout>
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/courselayout6_id"
+                                    android:layout_below="@id/courselayout5_id" />
+                        </RelativeLayout>
+                        </HorizontalScrollView>
+                    </ScrollView>
+                </android.support.v7.widget.CardView>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+            
         </RelativeLayout>
     </ScrollView>
 </RelativeLayout>
