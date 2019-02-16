@@ -14,7 +14,7 @@ import android.view.ViewGroup;
 
 public class MainFragment extends Fragment {
 
-    private CardView resCard,aboutCard,studentCard,developerCard;
+    private CardView resCard,aboutCard,studentCard,developerCard,academicsCard;
         public MainFragment() {
         }
         View view;
@@ -33,6 +33,7 @@ public class MainFragment extends Fragment {
         aboutCard=view.findViewById(R.id.about_cardview_id);
         studentCard=view.findViewById(R.id.studnets_cardview_id);
         developerCard=view.findViewById(R.id.devlopers_cardview_id);
+        academicsCard=view.findViewById(R.id.academic_cardview_id);
         resCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,6 +62,13 @@ public class MainFragment extends Fragment {
             public void onClick(View v) {
                 Intent developerIntent=new Intent(getContext(),CareerDevelopmentActivity.class);
                 startActivity(developerIntent);
+            }
+        });
+        academicsCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent academicsIntent=new Intent(getContext(),AcademicActivity.class);
+                startActivity(academicsIntent);
             }
         });
     }
