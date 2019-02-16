@@ -14,9 +14,9 @@ import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 public class AcademicActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
-    private Button admissionButton,feeButton,placementButton;
-    private TextView admissionTextview,feeTextview,feeFirst,feeSecond,placementTextview;
-    private ExpandableRelativeLayout expandableLayout1,expandableLayout2,expandableLayout3;
+    private Button admissionButton,feeButton,placementButton,coursestudyButton;
+    private TextView admissionTextview,feeTextview,feeFirst,feeSecond,placementTextview,coursestudyTextview,coursestudyTextview1;
+    private ExpandableRelativeLayout expandableLayout1,expandableLayout2,expandableLayout3,expandableLayout4;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -223,6 +223,39 @@ public class AcademicActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout3.toggle();
+            }
+        });
+
+        coursestudyButton=findViewById(R.id.coursestudy_button_id);
+        expandableLayout4=findViewById(R.id.expandablelayout4_academic);
+        coursestudyTextview=findViewById(R.id.courselayout6_id);
+        coursestudyTextview1=findViewById(R.id.courselayout3_id);
+        coursestudyTextview.setText(Html.fromHtml("<h3><font color=\"#5F0D0D\">(E) Doctoral Programmes (Ph. D.)</h3>\n" +
+                "\n" +
+                "<ul class=\"UL1\">\n" +
+                "<li> Civil Engineering</li>\n" +
+                "  <li>Computer Science & Engineering</li>\n" +
+                "  <li>Electrical Engineering</li>\n" +
+                "  <li>Electronics Engineering</li>\n" +
+                "  <li>Mechanical Engineering</li>\n" +
+                "  <li>Humanities and Applied sciences</li>\n" +
+                " "));
+        coursestudyTextview1.setText(Html.fromHtml("*AICTE sanctioned intake, ** 10% additional intake in lieu of the Fee Waver Scheme<br><br>\n" +
+                "<h3>Note:</h3>" +
+                "<li><strong>(i)</strong> The Institution under the <strong>AICTE Tuition Fee Waiver Scheme</strong> has been allowed to admit 10%\n" +
+                "of its sanctioned intake as an additional intake in the same discipline/branch of study.</li>\n" +
+                "<li><strong>(ii) </strong>In addition to the above, a total number of <strong>10 students</strong> as <strong>Other States Nominees</strong> are also admitted as per norms of Govt. of India.</li>\n" +
+                "<li><strong>(iii) 5%</strong> seats on the total sanctioned intake as approved by AICTE are also available for Non Resident\n" +
+                "Indians <strong>(NRI).</strong></li>\n"));
+        coursestudyButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                expandableLayout4.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                    }
+                });
+                expandableLayout4.toggle();
             }
         });
     }
