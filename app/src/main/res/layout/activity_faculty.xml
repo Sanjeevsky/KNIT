@@ -753,7 +753,7 @@
                                         android:layout_height="match_parent">
                                         <TableRow>
                                             <TextView
-                                                style="bold"
+                                                android:textStyle="bold"
                                                 android:textColor="#6B1010"
                                                 android:text="FACULTY OF COMPUTER SCIENCE &amp; ENGINEERING"/>
                                         </TableRow>
@@ -846,7 +846,7 @@
                                         android:layout_height="match_parent">
                                         <TableRow>
                                             <TextView
-                                                style="bold"
+                                                android:textStyle="bold"
                                                 android:textColor="#6B1010"
                                                 android:text="SYSTEM OFFICIALS"/>
                                         </TableRow>
@@ -900,7 +900,7 @@
                                         android:layout_height="match_parent">
                                         <TableRow>
                                             <TextView
-                                                style="bold"
+                                                android:textStyle="bold"
                                                 android:textColor="#6B1010"
                                                 android:text="FACULTY OF M.C.A."/>
                                         </TableRow>
@@ -911,6 +911,7 @@
                                         android:layout_height="match_parent"
                                         android:orientation="vertical"
                                         android:stretchColumns="*"
+                                        android:layout_marginBottom="10dp"
                                         android:showDividers="middle"
                                         android:padding="5dp"
                                         android:divider="?android:attr/dividerHorizontal">

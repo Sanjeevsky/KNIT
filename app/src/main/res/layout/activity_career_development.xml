@@ -1,0 +1,724 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CareerDevelopmentActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_id_career"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:layout_below="@id/toolbar_id_career">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/career_development_id"
+                android:drawableLeft="@drawable/dropdown"
+                android:background="@drawable/round_corner_button"
+                android:textColor="#fff"
+                android:elevation="10dp"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Career Development Cell"/>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/expandablelayout1_career"
+                android:background="#ffff"
+                app:ael_duration="400"
+                android:layout_below="@+id/career_development_id"
+                app:ael_expanded="false"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical"
+                android:layout_marginBottom="5dp">
+
+                        <Button
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/career_button_id"
+                            android:textColor="#fff"
+                            android:background="@drawable/round_corner_button_for_clickhere"
+                            android:textSize="20dp"
+                            android:text="Click Here"/>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/student_module_id"
+                android:drawableLeft="@drawable/dropdown"
+                android:background="@drawable/round_corner_button"
+                android:textColor="#fff"
+                android:elevation="10dp"
+                android:layout_below="@id/expandablelayout1_career"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Studnet Placement Module"/>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/expandablelayout2_career"
+                android:background="#ffff"
+                app:ael_duration="400"
+                android:layout_below="@+id/student_module_id"
+                app:ael_expanded="false"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical"
+                android:layout_marginBottom="5dp">
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/student_placement_button_id"
+                    android:textColor="#fff"
+                    android:background="@drawable/round_corner_button_for_clickhere"
+                    android:textSize="20dp"
+                    android:text="Click Here"/>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/training_button_id"
+                android:drawableLeft="@drawable/dropdown"
+                android:background="@drawable/round_corner_button"
+                android:textColor="#fff"
+                android:elevation="10dp"
+                android:padding="10dp"
+                android:layout_below="@id/expandablelayout2_career"
+                android:layout_marginBottom="5dp"
+                android:text="Training &amp; Workshop"/>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/expandablelayout3_career"
+                android:background="#ffff"
+                app:ael_duration="400"
+                android:layout_below="@+id/training_button_id"
+                app:ael_expanded="false"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical"
+                android:layout_marginBottom="5dp">
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="10dp"
+                    android:padding="5dp"
+                    app:cardCornerRadius="5dp">
+
+                    <ScrollView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fillViewport="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/training_textview_id" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linearLayouttarining"
+                            android:layout_below="@id/training_textview_id"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_marginBottom="5dp">
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp">
+                                        <TextView
+                                            android:textStyle="bold"
+                                            android:textColor="#5F0D0D"
+                                            android:text="Training conducted ofr session 2016-17"/>
+                                    </TableRow>
+                                </TableLayout>
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:stretchColumns="*"
+                                    android:orientation="vertical"
+                                    android:padding="5dip"
+                                    android:divider="?android:attr/dividerHorizontal"
+                                    android:showDividers="middle">
+
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Branch"
+                                            android:textColor="#131212"
+                                            android:paddingRight="7dp"
+                                            android:textStyle="bold" />
+                                        <TextView
+                                            android:text="Year"
+                                            android:paddingLeft="4dp"
+                                            android:textColor="#131212"
+                                            android:paddingRight="7dp"
+                                            android:textStyle="bold" />
+                                        <TextView
+                                            android:text="Topic"
+                                            android:paddingLeft="4dp"
+                                            android:textColor="#131212"
+                                            android:textStyle="bold" />
+
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Civil Engg."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Statpro"
+                                            android:padding="4dp"/>
+
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Civil Engg."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Proe"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Computer Sc. Engg."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Linux"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Computer Sc. Engg."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Data Analysis"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Electrical Engg."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="PLC/SCADA"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Electrical Engg."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="PLC/SCADA"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Electronics Engg."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="VHDL"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Electronics Engg."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="IOT"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Mechanical Engg."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Solid Works"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Mechanical Engg."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Catia"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Information Tech."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Networking"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Information Tech."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Networking"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="MCA"/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="ASP.NET"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+
+                                </TableLayout>
+
+                            </LinearLayout>
+
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp">
+                                        <TextView
+                                            android:textStyle="bold"
+                                            android:textColor="#5F0D0D"
+                                            android:text="Training conducted for session 2017-18"/>
+                                    </TableRow>
+                                </TableLayout>
+
+                                <TableLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:stretchColumns="*"
+                                    android:orientation="vertical"
+                                    android:padding="5dip"
+                                    android:divider="?android:attr/dividerHorizontal"
+                                    android:showDividers="middle">
+
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Branch"
+                                            android:textColor="#131212"
+                                            android:paddingRight="7dp"
+                                            android:textStyle="bold" />
+                                        <TextView
+                                            android:text="Year"
+                                            android:paddingLeft="4dp"
+                                            android:textColor="#131212"
+                                            android:paddingRight="7dp"
+                                            android:textStyle="bold" />
+                                        <TextView
+                                            android:text="Topic"
+                                            android:paddingLeft="4dp"
+                                            android:textColor="#131212"
+                                            android:textStyle="bold" />
+
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Civil Engg."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="AutoCAD"
+                                            android:padding="4dp"/>
+
+                                    </TableRow>
+
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Civil Engg."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="3Ds MAX"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Computer Sc. Engg."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Android App Development"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Computer Sc. Engg."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Machine Learning"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Electrical Engg."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="MATLAB &amp; Programming"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Electrical Engg."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Programming &amp; Power Factory"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Electronics Engg."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="VLSI"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Electronics Engg."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="IOT"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Mechanical Engg."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="CATIA v5"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Mechanical Engg."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="ANSYS"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Information Tech."/>
+                                        <TextView
+                                            android:text="2nd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Networking with LINUX Security"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+                                    <TableRow
+                                        android:paddingRight="3dp"
+                                        android:layout_marginRight="3dp"
+                                        android:divider="?android:attr/dividerVertical"
+                                        android:showDividers="middle">
+
+                                        <TextView
+                                            android:text="Information Tech."/>
+                                        <TextView
+                                            android:text="3rd"
+                                            android:paddingLeft="4dp"/>
+                                        <TextView
+                                            android:text="Cloud Computing"
+                                            android:padding="4dp"/>
+                                    </TableRow>
+
+                                </TableLayout>
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_below="@id/linearLayouttarining">
+
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_weight="1"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/workshops_image"/>
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/reasearch_image"/>
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:src="@drawable/seminar_image"/>
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    </ScrollView>
+
+                </android.support.v7.widget.CardView>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/internship_button_id"
+                android:drawableLeft="@drawable/dropdown"
+                android:background="@drawable/round_corner_button"
+                android:textColor="#fff"
+                android:elevation="10dp"
+                android:layout_below="@id/expandablelayout3_career"
+                android:padding="10dp"
+                android:layout_marginBottom="5dp"
+                android:text="Internship"/>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/expandablelayout4_career"
+                android:background="#ffff"
+                app:ael_duration="400"
+                android:layout_below="@+id/internship_button_id"
+                app:ael_expanded="false"
+                app:ael_interpolator="accelerate"
+                app:ael_orientation="vertical"
+                android:layout_marginBottom="5dp">
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="10dp"
+                    android:padding="5dp"
+                    app:cardCornerRadius="5dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/internship_textview_id" />
+                </android.support.v7.widget.CardView>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
