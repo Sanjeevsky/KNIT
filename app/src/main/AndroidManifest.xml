@@ -13,8 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CareerDevelopmentActivity"
-            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".AcademicActivity"></activity>
+        <activity
+            android:name=".CareerDevelopmentActivity"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".FacultyActivity"
             android:parentActivityName=".MainActivity" />
