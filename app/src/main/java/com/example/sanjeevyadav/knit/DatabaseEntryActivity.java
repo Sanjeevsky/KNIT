@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -48,6 +49,7 @@ public class DatabaseEntryActivity extends AppCompatActivity implements AdapterV
     private RecyclerView recyclerView,recyclerView2;
     private ExpandableLayout expandableLayout1,expandableLayout2;
     private Button NewsExpand,ResultExpand;
+    private Toolbar toolbar;
 
 
     @Override
@@ -58,6 +60,11 @@ public class DatabaseEntryActivity extends AppCompatActivity implements AdapterV
         spin.setOnItemSelectedListener(this);
         Spinner spin2 = (Spinner) findViewById(R.id.spinner2);
         spin2.setOnItemSelectedListener(this);
+        toolbar=findViewById(R.id.toolbar_id);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("DataBase Entry Section");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         newsRef = FirebaseDatabase.getInstance().getReference("newsfeeds");
         resRef = FirebaseDatabase.getInstance().getReference("results");
         NewsText = findViewById(R.id.news_text_id);
@@ -72,6 +79,7 @@ public class DatabaseEntryActivity extends AppCompatActivity implements AdapterV
         expandableLayout1=findViewById(R.id.expandableLayout1_news);
         ResultExpand=findViewById(R.id.result_update_expandable);
         expandableLayout2=findViewById(R.id.expandableLayout1_result);
+        mAuth=FirebaseAuth.getInstance();
 
         NewsExpand.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -351,4 +359,10 @@ public class DatabaseEntryActivity extends AppCompatActivity implements AdapterV
         }
     }
 
+    @Override
+    public void onBackPressed() {
+        mAuth.signOut();
+        Toast.makeText(this, "Logged Out Successfully", Toast.LENGTH_SHORT).show();
+        super.onBackPressed();
+    }
 }
