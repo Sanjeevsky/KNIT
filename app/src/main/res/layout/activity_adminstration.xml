@@ -62,7 +62,45 @@
                 android:id="@+id/layout2"
                 android:layout_below="@id/layout1"
                 android:layout_marginTop="20dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
+                        <TextView
+                            android:layout_height="match_parent"
+                            android:text="By-Laws"
+                            android:textSize="14dp"
+                            android:id="@+id/pdf_laws"
+                            android:layout_width="match_parent"
+                            android:textColor="#ff0000"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:text="Board Of Governors"
+                        android:textSize="14dp"
+                        android:id="@+id/pdf_boards_of_governers"
+                        android:layout_width="match_parent"
+                        android:textColor="#ff0000"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:text="Minutes Bog"
+                        android:textSize="14dp"
+                        android:id="@+id/pdf_minutes_bog"
+                        android:layout_width="match_parent"
+                        android:textColor="#ff0000"/>
+                </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -138,8 +176,19 @@
                             android:textColor="@android:color/black"/>
                     </LinearLayout>
 
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
 
-
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:text="Members of Academic Council and Faculty Board "
+                        android:textSize="14dp"
+                        android:id="@+id/pdf_member_of_academics"
+                        android:layout_width="match_parent"
+                        android:textColor="#ff0000"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -245,6 +294,19 @@
 
 
 
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_height="match_parent"
+                        android:text="List of Office-Bearers"
+                        android:textSize="14dp"
+                        android:layout_width="match_parent"
+                        android:textColor="#ff0000"
+                        android:id="@+id/pdf_list_of_office_bearers"/>
                 </LinearLayout>
 
 

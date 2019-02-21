@@ -40,7 +40,7 @@
                     <ImageView
                         android:id="@+id/imageView1_id"
                         android:layout_width="wrap_content"
-                        android:layout_height="230dp"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:scaleType="fitXY"
                         android:src="@drawable/director_img"
