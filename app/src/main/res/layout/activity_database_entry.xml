@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DatabaseEntryActivity">
+
     <android.support.v7.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -14,21 +15,20 @@
         app:titleTextColor="#ffffff"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
-
         <RelativeLayout
             android:layout_below="@id/toolbar_id"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="5dp">
+            android:padding="10dp">
             <Button
                 android:id="@+id/news_update_expandable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#ff0000"
+                android:background="@drawable/round_corner_button"
                 android:drawableLeft="@drawable/dropdown"
                 android:elevation="10dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="20dp"
                 android:padding="15dp"
                 android:text="News Update Interface"
                 android:textColor="#fff" />
@@ -57,12 +57,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
+                            android:padding="10dp"
                             android:id="@+id/linear_layout">
 
                             <EditText
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/edibutton"
+                                android:background="@drawable/edittext_border"
                                 android:layout_marginBottom="10dp"
                                 android:hint="Enter News Text"
                                 android:paddingStart="25dp"
@@ -75,7 +76,7 @@
                                 android:layout_height="40dp"
                                 android:hint="Enter News Link"
                                 android:paddingStart="25dp"
-                                android:background="@drawable/edibutton"
+                                android:background="@drawable/edittext_border"
                                 android:layout_marginBottom="10dp"
                                 android:id="@+id/news_link_id"
                                 android:paddingLeft="5dp"
@@ -87,10 +88,9 @@
                                 android:layout_height="35dp"
                                 android:id="@+id/spinner"
                                 android:paddingStart="25dp"
-                                android:background="@drawable/edibutton"
+                                android:background="@drawable/edittext_border"
                                 android:elevation="10dp"
                                 android:layout_marginBottom="10dp"
-                                android:layout_marginLeft="5dp"
                                 android:layout_marginRight="5dp"
                                 />
                             <Button
@@ -98,48 +98,35 @@
                                 android:layout_height="45dp"
                                 android:text="Add News"
                                 android:textColor="#ffff"
-                                android:textSize="24dp"
+                                android:layout_marginBottom="20dp"
                                 android:id="@+id/submit_news_button"
-                                android:background="@drawable/login_draw_btn"/>
+                                android:background="@drawable/round_corner_button"/>
                       
                             <android.support.v7.widget.RecyclerView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:padding="5dp"
-                                android:id="@+id/recyclerview_id_data"/>
-
-
-
+                                android:id="@+id/recyclerview_id_data"></android.support.v7.widget.RecyclerView>
 
                         </LinearLayout>
-
 
                     </ScrollView>
 
                 </android.support.v7.widget.CardView>
 
-
-
-
-
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
-
             <Button
-
                 android:id="@+id/result_update_expandable"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#ff0000"
+                android:background="@drawable/round_corner_button"
                 android:drawableLeft="@drawable/dropdown"
                 android:elevation="10dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginBottom="20dp"
                 android:padding="15dp"
                 android:text="Result Update Interface"
                 android:textColor="#fff"
                 android:layout_below="@id/expandableLayout1_news"/>
-
-
 
             <com.github.aakira.expandablelayout.ExpandableRelativeLayout
                 android:id="@+id/expandableLayout1_result"
@@ -164,81 +151,57 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="vertical"
+                            android:padding="10dp"
                             android:id="@+id/linear_layout2">
                             <EditText
-                                android:layout_marginLeft="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
-                                android:background="@drawable/edibutton"
+                                android:background="@drawable/edittext_border"
                                 android:layout_marginBottom="10dp"
                                 android:hint="Enter Result Text"
                                 android:paddingStart="25dp"
                                 android:id="@+id/result_text_id"
-                                android:paddingLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                />
+                                android:layout_marginRight="5dp" />
                             <EditText
-                                android:layout_marginLeft="5dp"
                                 android:layout_width="match_parent"
                                 android:layout_height="40dp"
                                 android:hint="Enter Result Link"
-                                android:paddingLeft="5dp"
                                 android:layout_marginRight="5dp"
-                                android:background="@drawable/edibutton"
+                                android:background="@drawable/edittext_border"
                                 android:layout_marginBottom="10dp"
                                 android:paddingStart="25dp"
-                                android:id="@+id/result_link_id"
-
-                                />
+                                android:id="@+id/result_link_id" />
                             <Spinner
                                 android:layout_width="match_parent"
                                 android:layout_height="35dp"
                                 android:id="@+id/spinner2"
                                 android:paddingStart="25dp"
-                                android:background="@drawable/edibutton"
+                                android:background="@drawable/edittext_border"
                                 android:elevation="10dp"
                                 android:layout_marginBottom="10dp"
-                                android:layout_marginLeft="5dp"
-                                android:layout_marginRight="5dp"
-                                />
+                                android:layout_marginRight="5dp" />
                             <Button
                                 android:layout_width="match_parent"
                                 android:layout_height="45dp"
                                 android:text="Add Result"
                                 android:textColor="#ffff"
-                                android:textSize="24dp"
+                                android:layout_marginBottom="20dp"
                                 android:id="@+id/submit_result_button"
-                                android:background="@drawable/login_draw_btn"/>
-
-
+                                android:background="@drawable/round_corner_button"/>
 
                             <android.support.v7.widget.RecyclerView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:padding="5dp"
                                 android:id="@+id/recyclerview_id_data2">
 
                             </android.support.v7.widget.RecyclerView>
                         </LinearLayout>
                     </ScrollView>
 
-
-
-
-
                 </android.support.v7.widget.CardView>
-
-
-
-
-
 
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
-
-
-
         </RelativeLayout>
-
 
     </RelativeLayout>

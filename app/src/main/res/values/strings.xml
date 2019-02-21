@@ -6,7 +6,7 @@
     <string name="navigation_open">Open Navigation Drawer</string>
     <string name="navigation_close">Close Navigation Drawer</string>
     <string name="html"><![CDATA[<p>The general welfare of the students is looked after by the Dean of Students Welfare.<br/><br/>
-<h3><font color="#FF0000">Identity Card</h3>
+<h3><font color="#5F0D0D">Identity Card</h3>
 <strong>(i) </strong>In order to enjoy the status and privileges of a bona fide student of the Institute, each
 student must obtain an Identity Card from the office of the Dean of Students Welfare at
 the time of registration or afterwards as per the notification.<br/>
@@ -17,7 +17,7 @@ the time of registration or afterwards as per the notification.<br/>
 issued by the Dean of Students Welfare on request after depositing a fee ` 50/in
 theAccount Section of the Institute.<br/>
 <br/>
-<h3><font color="#FF0000">Railway Concession</h3>
+<h3><font color="#5F0D0D">Railway Concession</h3>
 
 This Facility is available to only regular students of the Institute<br/><br/>
 <strong>(i) </strong>The railway concession orders are issued by the office of the Dean of Students Welfare to the
@@ -40,7 +40,7 @@ action which the railway authorities may deem fit.<br/>
 <strong>(v)</strong> A student must show his identity Card for verification by the Station Master or by the railway
 authorities during the journey.<br/>
 <br/>
-<h3><font color="#FF0000">DRESS/UNIFORM</h3>
+<h3><font color="#5F0D0D">DRESS/UNIFORM</h3>
 The students are supposed to keep themselves neat and tidy. They are advised not to wear loose
 dresses which may be unsafe for working near the machines or be uncomfortable for outdoor field
 work. The B.Tech, MCA and M.Tech full time boys students must wear prescribed uniform which
@@ -48,7 +48,7 @@ consists of white shirt, steel grey trousers, black shoes with white shocks, pla
 navy blue blazers(during winters). The prescribed uniform for girl students is steel grey Kurta,
 white Salwar with white Dupatta, black shoes/sandles and navy blue sweaters(during winters).<br/><br/>
 
-<h3><font color="#FF0000">CONDUCT & DISCIPLINE</h3>
+<h3><font color="#5F0D0D">CONDUCT & DISCIPLINE</h3>
 Students are required to maintain a high standard of discipline and to follow the Institute rules
 strictly. The competent authority may revise and notify the conduct rules in the interest of the
 institute and students as and when necessary.<br/><br/>
@@ -88,9 +88,9 @@ Director.<br/>
 <br/>
 </p>]]></string>
 
-    <string name="student_body1"><![CDATA[<p><h3><font color="#ff0000">Professional & Social Bodies</h3>
+    <string name="student_body1"><![CDATA[<p><h3><font color="#5F0D0D">Professional & Social Bodies</h3>
 </p>]]></string>
-    <string name="student_body2"><![CDATA[<p><h3><font color="#ff0000">Council of Student Activities</h3>
+    <string name="student_body2"><![CDATA[<p><h3><font color="#5F0D0D">Council of Student Activities</h3>
 
 <p>The Council of Student Activities (CSA) aims to promote and develop extra curricular Activities of students.It organizes various games, sports, exhibitions and other extra curricular activities.There are in all five Sub Councils under C.S.A.<br/>
     <br/>

@@ -35,12 +35,16 @@ public class StudentActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        expandableLayout4=findViewById(R.id.expandableLayout4);
+        expandableLayout1 = findViewById(R.id.expandableLayout1);
+        expandableLayout2 = findViewById(R.id.expandableLayout2);
+        expandableLayout3 = findViewById(R.id.expandableLayout3);
+        expandableLayout5=findViewById(R.id.expandableLayout5);
+
 
         StudentAcademicsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                expandableLayout1 = findViewById(R.id.expandableLayout1);
-
                 t1=findViewById(R.id.button_id1);
                 t1.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -51,13 +55,23 @@ public class StudentActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout1.toggle();
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
+                if(expandableLayout5.isExpanded()){
+                    expandableLayout5.collapse();
+                }
             }
         });
     UpdateStudentProfile.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            expandableLayout2 = findViewById(R.id.expandableLayout2);
-
             t2=findViewById(R.id.button_id2);
             t2.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -68,34 +82,53 @@ public class StudentActivity extends AppCompatActivity {
                 }
             });
             expandableLayout2.toggle();
+            if(expandableLayout1.isExpanded()){
+                expandableLayout1.collapse();
+            }
+            if(expandableLayout3.isExpanded()){
+                expandableLayout3.collapse();
+            }
+            if(expandableLayout4.isExpanded()){
+                expandableLayout4.collapse();
+            }
+            if(expandableLayout5.isExpanded()){
+                expandableLayout5.collapse();
+            }
         }
     });
            DownloadProvisionalCerti.setOnClickListener(new View.OnClickListener() {
                @Override
                    public void onClick(View v) {
-                       expandableLayout3 = findViewById(R.id.expandableLayout3);
-
-                       t3=findViewById(R.id.button_id3);
-                       t3.setOnClickListener(new View.OnClickListener() {
-                           @Override
-                           public void onClick(View v) {
-                               Intent studentIntent=new Intent(StudentActivity.this,webview_acticity.class);
-                               studentIntent.putExtra("url","http://knit.ac.in/academics/Provisional/FrmProvisional.aspx");
-                               startActivity(studentIntent);
-                           }
-                       });
+                   t3 = findViewById(R.id.button_id3);
+                   t3.setOnClickListener(new View.OnClickListener() {
+                       @Override
+                       public void onClick(View v) {
+                           Intent studentIntent = new Intent(StudentActivity.this, webview_acticity.class);
+                           studentIntent.putExtra("url", "http://knit.ac.in/academics/Provisional/FrmProvisional.aspx");
+                           startActivity(studentIntent);
+                       }
+                   });
                    expandableLayout3.toggle();
+                   if (expandableLayout1.isExpanded()) {
+                       expandableLayout1.collapse();
                    }
-
+                   if (expandableLayout2.isExpanded()) {
+                       expandableLayout2.collapse();
+                   }
+                   if (expandableLayout4.isExpanded()) {
+                       expandableLayout4.collapse();
+                   }
+                   if (expandableLayout5.isExpanded()) {
+                       expandableLayout5.collapse();
+                   }
+               }
            });
 
         text=findViewById(R.id.text_id);
         text.setText(Html.fromHtml(getString(R.string.html)));
-
            StudentWelfare.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   expandableLayout4=findViewById(R.id.expandableLayout4);
                    expandableLayout4.setOnClickListener(new View.OnClickListener() {
                        @Override
                        public void onClick(View v) {
@@ -103,6 +136,18 @@ public class StudentActivity extends AppCompatActivity {
                        }
                    });
                    expandableLayout4.toggle();
+                   if(expandableLayout1.isExpanded()){
+                       expandableLayout1.collapse();
+                   }
+                   if(expandableLayout2.isExpanded()){
+                       expandableLayout2.collapse();
+                   }
+                   if(expandableLayout3.isExpanded()){
+                       expandableLayout3.collapse();
+                   }
+                   if(expandableLayout5.isExpanded()){
+                       expandableLayout5.collapse();
+                   }
                }
 
            });
@@ -116,7 +161,6 @@ public class StudentActivity extends AppCompatActivity {
            StudentBodies.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View v) {
-                   expandableLayout5=findViewById(R.id.expandableLayout5);
                    expandableLayout5.setOnClickListener(new View.OnClickListener() {
                        @Override
                        public void onClick(View v) {
@@ -124,10 +168,19 @@ public class StudentActivity extends AppCompatActivity {
                        }
                    });
                    expandableLayout5.toggle();
+                   if(expandableLayout1.isExpanded()){
+                       expandableLayout1.collapse();
+                   }
+                   if(expandableLayout2.isExpanded()){
+                       expandableLayout2.collapse();
+                   }
+                   if(expandableLayout3.isExpanded()){
+                       expandableLayout3.collapse();
+                   }
+                   if(expandableLayout4.isExpanded()){
+                       expandableLayout4.collapse();
+                   }
                }
            });
-
-
-
     }
 }

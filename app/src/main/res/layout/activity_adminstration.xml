@@ -207,7 +207,7 @@
                             android:layout_width="match_parent"
                             android:layout_weight="1"
                             android:layout_height="match_parent"
-                            android:text="	Finance And Accounts Officer "
+                            android:text="Finance And Accounts Officer "
                             android:textColor="@android:color/black"/>
                         <TextView
                             android:layout_width="match_parent"
