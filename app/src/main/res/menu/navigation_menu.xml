@@ -31,13 +31,9 @@
 
     <menu>
         <item
-            android:title="Ashish Kumar CSE"
-            android:icon="@drawable/support_icon"
-            android:id="@+id/developers1_id" />
-        <item
-            android:title="Sanjeev Kumar CSE"
-            android:icon="@drawable/support_icon"
-            android:id="@+id/developers2_id" />
+            android:title="Developer's Desk"
+            android:icon="@drawable/knitlogo"
+            android:id="@+id/developers" />
     </menu>
 
 </item>

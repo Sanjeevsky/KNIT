@@ -101,7 +101,7 @@
                                 android:layout_marginBottom="20dp"
                                 android:id="@+id/submit_news_button"
                                 android:background="@drawable/round_corner_button"/>
-                      
+                                android:background="@drawable/login_draw_btn"/>
                             <android.support.v7.widget.RecyclerView
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
