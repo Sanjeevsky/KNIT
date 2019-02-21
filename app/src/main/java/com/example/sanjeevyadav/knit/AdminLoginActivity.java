@@ -46,7 +46,6 @@ public class AdminLoginActivity extends AppCompatActivity {
                             if (task.isSuccessful()) {
                                 Toast.makeText(AdminLoginActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
                                 Intent startIntent = new Intent(AdminLoginActivity.this, DatabaseEntryActivity.class);
-                                startIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                                 startActivity(startIntent);
                             } else {
                                 Toast.makeText(AdminLoginActivity.this, "" + task.getException(), Toast.LENGTH_LONG).show();
