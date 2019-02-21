@@ -28,6 +28,11 @@ public class CareerDevelopmentActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        expandableLayout1=findViewById(R.id.expandablelayout1_depart);
+        expandableLayout2=findViewById(R.id.expandablelayout2_depart);
+        expandableLayout3=findViewById(R.id.expandablelayout3_depart);
+        expandableLayout4=findViewById(R.id.expandablelayout4_depart);
+
         career_button=findViewById(R.id.career_development_id);
         expandableLayout1=findViewById(R.id.expandablelayout1_career);
         career_button.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +48,15 @@ public class CareerDevelopmentActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout1.toggle();
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
             }
         });
 
@@ -61,6 +75,15 @@ public class CareerDevelopmentActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout2.toggle();
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
             }
         });
 
@@ -80,6 +103,15 @@ public class CareerDevelopmentActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout3.toggle();
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
             }
         });
         intershipButton=findViewById(R.id.internship_button_id);
@@ -113,6 +145,15 @@ public class CareerDevelopmentActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout4.toggle();
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
             }
         });
     }

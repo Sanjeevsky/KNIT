@@ -24,8 +24,14 @@ public class FacultyActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        applied_button=findViewById(R.id.faculty_applied_button_id);
         expandableLayout1=findViewById(R.id.expandablelayout1_faculty);
+        expandableLayout2=findViewById(R.id.expandablelayout2_faculty);
+        expandableLayout3=findViewById(R.id.expandablelayout3_faculty);
+        expandableLayout4=findViewById(R.id.expandablelayout4_faculty);
+        expandableLayout5=findViewById(R.id.expandablelayout5_faculty);
+        expandableLayout6=findViewById(R.id.expandablelayout6_faculty);
+
+        applied_button=findViewById(R.id.faculty_applied_button_id);
         applied_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -36,10 +42,25 @@ public class FacultyActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout1.toggle();
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
+                if(expandableLayout5.isExpanded()){
+                    expandableLayout5.collapse();
+                }
+                if(expandableLayout6.isExpanded())
+                {
+                    expandableLayout6.collapse();
+                }
             }
         });
         civil_button=findViewById(R.id.faculty_civil_button_id);
-        expandableLayout2=findViewById(R.id.expandablelayout2_faculty);
         civil_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,10 +71,25 @@ public class FacultyActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout2.toggle();
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
+                if(expandableLayout5.isExpanded()){
+                    expandableLayout5.collapse();
+                }
+                if(expandableLayout6.isExpanded())
+                {
+                    expandableLayout6.collapse();
+                }
             }
         });
         electrical_button=findViewById(R.id.faculty_electrical_button_id);
-        expandableLayout3=findViewById(R.id.expandablelayout3_faculty);
         electrical_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,10 +100,25 @@ public class FacultyActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout3.toggle();
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
+                if(expandableLayout5.isExpanded()){
+                    expandableLayout5.collapse();
+                }
+                if(expandableLayout6.isExpanded())
+                {
+                    expandableLayout6.collapse();
+                }
             }
         });
         electronic_button=findViewById(R.id.faculty_electronics_button_id);
-        expandableLayout4=findViewById(R.id.expandablelayout4_faculty);
         electronic_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,10 +129,25 @@ public class FacultyActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout4.toggle();
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout5.isExpanded()){
+                    expandableLayout5.collapse();
+                }
+                if(expandableLayout6.isExpanded())
+                {
+                    expandableLayout6.collapse();
+                }
             }
         });
         mechanical_button=findViewById(R.id.faculty_mechanical_button_id);
-        expandableLayout5=findViewById(R.id.expandablelayout5_faculty);
         mechanical_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,10 +158,25 @@ public class FacultyActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout5.toggle();
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
+                if(expandableLayout6.isExpanded())
+                {
+                    expandableLayout6.collapse();
+                }
             }
         });
         computer_button=findViewById(R.id.faculty_computer_button_id);
-        expandableLayout6=findViewById(R.id.expandablelayout6_faculty);
         computer_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -106,6 +187,22 @@ public class FacultyActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout6.toggle();
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
+                if(expandableLayout5.isExpanded())
+                {
+                    expandableLayout5.collapse();
+                }
             }
         });
     }

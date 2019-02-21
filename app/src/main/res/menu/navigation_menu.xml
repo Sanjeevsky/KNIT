@@ -3,22 +3,27 @@
     <group android:checkableBehavior="single">
         <item
             android:title="Director's Desk"
-            android:icon="@drawable/knitlogo"
+            android:icon="@drawable/director_icon"
             android:id="@+id/director_id" />
         <item
             android:title="Adminstration"
+            android:icon="@drawable/administraion_icon"
             android:id="@+id/adminstration_id" />
         <item
             android:title="Departments"
+            android:icon="@drawable/department_icon"
             android:id="@+id/department_id"/>
         <item
             android:title="Faculty"
+            android:icon="@drawable/faculty_icon"
             android:id="@+id/faculty_id"/>
         <item
             android:id="@+id/contacts_id"
+            android:icon="@drawable/contacts_icon"
             android:title="Contacts"/>
         <item
             android:title="Login"
+            android:icon="@drawable/login_icon"
             android:id="@+id/login_menu_id"/>
 
     </group>
@@ -29,15 +34,8 @@
             android:title="Developer's Desk"
             android:icon="@drawable/knitlogo"
             android:id="@+id/developers" />
-
     </menu>
 
-
-
-
-
 </item>
-
-
 
 </menu>

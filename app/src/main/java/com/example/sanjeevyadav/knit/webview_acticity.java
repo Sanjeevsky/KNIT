@@ -41,7 +41,6 @@ public class webview_acticity extends AppCompatActivity {
         }
         else{
             final String pdf=bundle.getString("pdf");
-            //Toast.makeText(webview_acticity.this,"pdfweb  "+pdf,Toast.LENGTH_LONG).show();
             webView.loadUrl(pdf);
             webView.setDownloadListener(new DownloadListener() {
                 @Override
@@ -56,9 +55,8 @@ public class webview_acticity extends AppCompatActivity {
                     Toast.makeText(webview_acticity.this,"Your File Is Downloading",Toast.LENGTH_LONG).show();
                 }
             });
-
+            finish();
         }
-        //Toast.makeText(webview_acticity.this,url,Toast.LENGTH_LONG).show();
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
@@ -88,16 +86,13 @@ public class webview_acticity extends AppCompatActivity {
                 super.onReceivedIcon(view, icon);
             }
         });
-
     }
-
     @Override
     public void onBackPressed() {
         if (webView.canGoBack()) {
             webView.goBack();
             return;
         }
-        // Otherwise defer to system default behavior.
         super.onBackPressed();
     }
 }

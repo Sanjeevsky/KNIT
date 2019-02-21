@@ -28,10 +28,15 @@ public class AcademicActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        expandableLayout1=findViewById(R.id.expandablelayout1_academic);
+        expandableLayout2=findViewById(R.id.expandablelayout2_academic);
+        expandableLayout3=findViewById(R.id.expandablelayout3_academic);
+        expandableLayout4=findViewById(R.id.expandablelayout4_academic);
+
         admissionButton=findViewById(R.id.admission_button_id);
         expandableLayout1=findViewById(R.id.expandablelayout1_academic);
         admissionTextview=findViewById(R.id.admission_textview_id);
-        admissionTextview.setText(Html.fromHtml("<h3><font color=\"#ff0000\">Bachelor of Technology (B.Tech) Programmes</h3>\n" +
+        admissionTextview.setText(Html.fromHtml("<h3><font color=\"#5F0D0D\">Bachelor of Technology (B.Tech) Programmes</h3>\n" +
                 "\n" +
                 "\n" +
                 "<ul class=\"Asd1\">\n" +
@@ -99,14 +104,14 @@ public class AcademicActivity extends AppCompatActivity {
                 "<br>\n" +
                 "\n" +
                 "\n" +
-                "  <h3><font color=\"#ff0000\">Master of Computer Application (M.C.A.) Programme</h3>\n" +
+                "  <h3><font color=\"#5F0D0D\">Master of Computer Application (M.C.A.) Programme</h3>\n" +
                 "\n" +
                 "\n" +
                 "<ul class=\"Asd1\">\n" +
                 "<li> <strong>(a) Eligibility Requirements </strong><br>As notified in the information Brochure of SEE-AKTU.</li>\n" +
                 "<li> <strong>(b) Mode of Admission </strong><br>Mode of admission to MCA programme is same as for the Undergraduates Programme.</li>\n" +
                 "<li> <strong>(c) Reservations</strong> <br>As notified in the information Brochure of SEE-AKTU.</li>\n" +
-                "</ul><br><h3><font color=\"#ff0000\">M.Tech. (FullTime)Programmes</h3>\n" +
+                "</ul><br><h3><font color=\"#5F0D0D\">M.Tech. (FullTime)Programmes</h3>\n" +
                 "\n" +
                 "Admission to the above mentioned\n" +
                 "programmes is made on the basis of merit of the valid\n" +
@@ -114,13 +119,13 @@ public class AcademicActivity extends AppCompatActivity {
                 "of sufficient GATE\n" +
                 "qualified candidates, NON GATE\n" +
                 "candidates can be considered on vacant seats.</li>\n" +
-                "</ul><br><h3><font color=\"#ff0000\">M.Tech. (PartTime)Programmes</h3>\n" +
+                "</ul><br><h3><font color=\"#5F0D0D\">M.Tech. (PartTime)Programmes</h3>\n" +
                 "\n" +
                 "<ul class=\"Asd1\">\n" +
                 "<li><strong>(a) Eligibility Requirements</strong><br>The eligibility requirements shall be as per norms of Dr. A.P.J. Abdul Kalam Technical University, Lucknow.</li>\n" +
                 "<li><strong>(b) Mode of Admission</strong><br>Admission is made on the basis of merit of a candidate in the written test / interview\n" +
                 "conducted by the department concerned on a specified date.</li>\n" +
-                "</ul><br><h3><font color=\"#ff0000\">Doctoral Programmes</h3>\n" +
+                "</ul><br><h3><font color=\"#5F0D0D\">Doctoral Programmes</h3>\n" +
                 "\n" +
                 "<ul class=\"Asd1\">\n" +
                 "<li><strong>(a) Eligibility Requirements</strong><br>The eligibility requirements are as per the norms of Dr. A.P.J. Abdul Kalam Technical University, Lucknow.</li>\n" +
@@ -137,13 +142,22 @@ public class AcademicActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout1.toggle();
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
             }
         });
 
         feeButton=findViewById(R.id.fee_button_id);
         expandableLayout2=findViewById(R.id.expandablelayout2_academic);
         feeTextview=findViewById(R.id.fee_textview_id);
-        feeTextview.setText(Html.fromHtml("<h3><font color=\"#ff0000\">FEE AND OTHER CHARGES FOR FIRST YEAR STUDENTS</h3>\n" +
+        feeTextview.setText(Html.fromHtml("<h3><font color=\"#5F0D0D\">FEE AND OTHER CHARGES FOR FIRST YEAR STUDENTS</h3>\n" +
                 "The schedule of fee  to be paid by each student of First Year B.Tech, M.C.A., M.Tech., (Full Time) &amp; M.Tech (Part Time) is given below :<br>\n" +
                 "\n"));
         feeButton.setOnClickListener(new View.OnClickListener() {
@@ -155,6 +169,15 @@ public class AcademicActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout2.toggle();
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
             }
         });
         feeFirst=findViewById(R.id.feefrist_id);
@@ -178,14 +201,14 @@ public class AcademicActivity extends AppCompatActivity {
         placementButton=findViewById(R.id.placement_button_id);
         expandableLayout3=findViewById(R.id.expandablelayout3_academic);
         placementTextview=findViewById(R.id.placement_textview_id);
-        placementTextview.setText(Html.fromHtml(("<h3><font color=\"#ff0000\">Vocational Training</h3>\n" +
+        placementTextview.setText(Html.fromHtml(("<h3><font color=\"#5F0D0D\">Vocational Training</h3>\n" +
                 "B.Tech students are required to undergo ‘Vocational Training’ as per the provision of training in\n" +
                 "their curricula arranged by the institute during summer vacation. The students will bear the traveling\n" +
                 "and other expenses for the training. Marks assigned for the training are awarded on the basis of\n" +
                 "training report and viva voce\n" +
                 "examination.\n" +
                 "<br/><br/>\n" +
-                "           <h3><font color=\"#ff0000\">Placement</h3>\n" +
+                "           <h3><font color=\"#5F0D0D\">Placement</h3>\n" +
                 "The institute has a full fledged Training & Placement cell under the Training & Placement Officer\n" +
                 "(TPO) who is a senior faculty member. The Training & Placement office also looks after the\n" +
                 "placement of the students. The various reputed Industries /Organizations conduct campus\n" +
@@ -223,6 +246,15 @@ public class AcademicActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout3.toggle();
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
+                if(expandableLayout4.isExpanded()){
+                    expandableLayout4.collapse();
+                }
             }
         });
 
@@ -256,6 +288,15 @@ public class AcademicActivity extends AppCompatActivity {
                     }
                 });
                 expandableLayout4.toggle();
+                if(expandableLayout2.isExpanded()){
+                    expandableLayout2.collapse();
+                }
+                if(expandableLayout3.isExpanded()){
+                    expandableLayout3.collapse();
+                }
+                if(expandableLayout1.isExpanded()){
+                    expandableLayout1.collapse();
+                }
             }
         });
     }

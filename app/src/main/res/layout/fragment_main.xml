@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_image"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainFragment">
     <LinearLayout
@@ -18,9 +17,9 @@
             android:layout_width="match_parent"
             android:layout_height="170dp"
             android:gravity="center"
-            android:paddingTop="15dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingTop="20dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -44,27 +43,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:background="#A81111"
+                        android:background="#fff"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:background="#A81111"
+                            android:background="#fff"
                             android:padding="7dp">
 
                             <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/about_image_cardview" />
+                                android:src="@drawable/about_image_cardview1" />
 
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="4"
-                            android:background="#A81111"
+                            android:background="#fff"
                             android:paddingBottom="1dp">
 
                             <TextView
@@ -73,7 +72,7 @@
                                 android:text="About Us"
                                 android:gravity="center"
                                 android:layout_gravity="center"
-                                android:textColor="#FFFFFF"/>
+                                android:textColor="#A81111"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -101,19 +100,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:background="#A81111"
+                        android:background="#fff"
                         android:orientation="vertical">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#A81111"
+                            android:background="#fff"
                             android:padding="7dp"
                             android:layout_weight="1">
 
                             <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/academic_image_cardview" />
+                                android:src="@drawable/academic_image_cardview1" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -124,7 +123,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Academics"
-                                android:textColor="#FFFFFF"
+                                android:textColor="#A81111"
                                 android:gravity="center"/>
 
                         </LinearLayout>
@@ -140,9 +139,9 @@
             android:layout_height="160dp"
             android:gravity="center"
             android:layout_below="@+id/firstview"
-            android:paddingTop="5dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -166,27 +165,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:background="#A81111"
+                        android:background="#fff"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:background="#A81111"
+                            android:background="#fff"
                             android:padding="7dp">
 
                             <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/student_image_cardview" />
+                                android:src="@drawable/student_image_cardview1" />
 
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="4"
-                            android:background="#A81111"
+                            android:background="#fff"
                             android:paddingBottom="1dp">
 
                             <TextView
@@ -195,7 +194,7 @@
                                 android:text="Student"
                                 android:gravity="center"
                                 android:layout_gravity="center"
-                                android:textColor="#FFFFFF"/>
+                                android:textColor="#A81111"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -223,19 +222,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:background="#A81111"
+                        android:background="#fff"
                         android:orientation="vertical">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#A81111"
+                            android:background="#fff"
                             android:padding="7dp"
                             android:layout_weight="1">
 
                             <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/calendar_image_cardview" />
+                                android:src="@drawable/calendar_image_cardview1" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -246,7 +245,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:text="Calendar"
-                                android:textColor="#FFFFFF"
+                                android:textColor="#A81111"
                                 android:gravity="center"/>
 
                         </LinearLayout>
@@ -262,9 +261,9 @@
             android:layout_height="160dp"
             android:gravity="center"
             android:layout_below="@+id/secondview"
-            android:paddingTop="5dp"
-            android:paddingLeft="20dp"
-            android:paddingRight="20dp"
+            android:paddingTop="10dp"
+            android:paddingLeft="35dp"
+            android:paddingRight="35dp"
             android:orientation="horizontal">
 
             <LinearLayout
@@ -288,27 +287,27 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:background="#A81111"
+                        android:background="#fff"
                         android:orientation="vertical">
 
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="1"
-                            android:background="#A81111"
+                            android:background="#fff"
                             android:padding="7dp">
 
                             <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/result_image_cardview" />
+                                android:src="@drawable/result_image_cardview1" />
 
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_weight="4"
-                            android:background="#A81111"
+                            android:background="#fff"
                             android:paddingBottom="1dp">
 
                             <TextView
@@ -317,7 +316,7 @@
                                 android:text="Results"
                                 android:gravity="center"
                                 android:layout_gravity="center"
-                                android:textColor="#FFFFFF"/>
+                                android:textColor="#A81111"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -330,7 +329,6 @@
                 android:layout_weight="1"
                 android:paddingLeft="2dp"
                 android:gravity="center">
-
                 <android.support.v7.widget.CardView
                     android:id="@+id/devlopers_cardview_id"
                     android:layout_width="match_parent"
@@ -345,21 +343,19 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        android:background="#A81111"
+                        android:background="#fff"
                         android:orientation="vertical">
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:background="#A81111"
+                            android:background="#fff"
                             android:padding="7dp"
                             android:layout_weight="1">
-
                             <de.hdodenhof.circleimageview.CircleImageView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:src="@drawable/developer_image_cardview" />
+                                android:src="@drawable/career_cardview_image1" />
                         </LinearLayout>
-
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
@@ -367,17 +363,13 @@
                             <TextView
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:text="Devlopers"
-                                android:textColor="#FFFFFF"
+                                android:text="Career Devlopment Cell"
+                                android:textColor="#A81111"
                                 android:gravity="center"/>
-
                         </LinearLayout>
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
-
             </LinearLayout>
         </LinearLayout>
-
     </LinearLayout>
-
 </ScrollView>
