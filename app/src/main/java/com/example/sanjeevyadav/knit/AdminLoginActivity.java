@@ -1,5 +1,6 @@
 package com.example.sanjeevyadav.knit;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -21,6 +22,7 @@ public class AdminLoginActivity extends AppCompatActivity {
     private EditText Email,Password;
     private FirebaseAuth mAuth;
     private Button LoginButton;
+    private ProgressDialog loadingBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,7 +33,7 @@ public class AdminLoginActivity extends AppCompatActivity {
         Password=findViewById(R.id.login_user_password);
         LoginButton=findViewById(R.id.login_btn);
         mAuth=FirebaseAuth.getInstance();
-
+        loadingBar=new ProgressDialog(this);
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -39,11 +41,16 @@ public class AdminLoginActivity extends AppCompatActivity {
                 String password = Password.getText().toString();
 
                 if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
+                    loadingBar.create();
+                    loadingBar.setTitle("Logging In");
+                    loadingBar.setMessage("Please Wait");
+                    loadingBar.show();
 
                     mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             if (task.isSuccessful()) {
+                                loadingBar.dismiss();
                                 Toast.makeText(AdminLoginActivity.this, "Login Successful", Toast.LENGTH_LONG).show();
                                 Intent startIntent = new Intent(AdminLoginActivity.this, DatabaseEntryActivity.class);
                                 startActivity(startIntent);
@@ -54,6 +61,7 @@ public class AdminLoginActivity extends AppCompatActivity {
                     });
                 }
                 else {
+                    loadingBar.dismiss();
                     Toast.makeText(AdminLoginActivity.this, "Enter Email And Password", Toast.LENGTH_SHORT).show();
                 }
             }

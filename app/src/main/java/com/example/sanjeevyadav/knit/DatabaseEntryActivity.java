@@ -114,9 +114,11 @@ public class DatabaseEntryActivity extends AppCompatActivity implements AdapterV
             public void onClick(View v) {
                 newsText = NewsText.getText().toString();
                 newsLink = NewsLink.getText().toString();
+                NewsText.setText("");
+                NewsLink.setText("");
 
                 if (!TextUtils.isEmpty(newsText) && !TextUtils.isEmpty(newsLink) && !TextUtils.isEmpty(newsType)) {
-                    Long tsLong = System.currentTimeMillis() / 1000;
+                    Long tsLong = 1000000000-((System.currentTimeMillis() / 1000)%100000);
                     String ts = tsLong.toString();
                     Map messageTextBody = new HashMap();
                     messageTextBody.put("text", newsText);
@@ -226,9 +228,11 @@ public class DatabaseEntryActivity extends AppCompatActivity implements AdapterV
             public void onClick(View v) {
                 resText = ResText.getText().toString();
                 resLink = ResLink.getText().toString();
+                ResLink.setText("");
+                ResText.setText("");
 
                 if (!TextUtils.isEmpty(resText) && !TextUtils.isEmpty(resLink) && !TextUtils.isEmpty(resType)) {
-                    Long tsLong = System.currentTimeMillis() / 1000;
+                    Long tsLong = 1000000000-((System.currentTimeMillis() / 1000)%100000);
                     String ts = tsLong.toString();
                     Map messageTextBody = new HashMap();
                     messageTextBody.put("text", resText);
