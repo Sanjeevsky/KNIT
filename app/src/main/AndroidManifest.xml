@@ -17,7 +17,6 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".DevelopersActivity"
             android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".AcademicActivity" />
         <activity
             android:name=".CareerDevelopmentActivity"
             android:parentActivityName=".MainActivity" />
