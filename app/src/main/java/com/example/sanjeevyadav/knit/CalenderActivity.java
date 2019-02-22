@@ -17,7 +17,7 @@ public class CalenderActivity extends AppCompatActivity {
         setContentView(R.layout.activity_calender);
         toolbar=findViewById(R.id.toolbar_id_cal);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Calender");
+        getSupportActionBar().setTitle("Calendar");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 

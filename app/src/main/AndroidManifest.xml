@@ -52,8 +52,7 @@
             android:name=".DirectorActivity"
             android:parentActivityName=".MainActivity" />
         <activity
-            android:name=".webview_acticity"
-            android:parentActivityName=".MainActivity" />
+            android:name=".webview_acticity"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

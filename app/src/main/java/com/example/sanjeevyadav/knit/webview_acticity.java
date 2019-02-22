@@ -30,6 +30,12 @@ public class webview_acticity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         webView = findViewById(R.id.webview_id);
         progressBar = findViewById(R.id.progressbar_id);
         progressBar.setMax(100);
