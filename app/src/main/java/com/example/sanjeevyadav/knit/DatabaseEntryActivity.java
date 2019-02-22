@@ -65,6 +65,12 @@ public class DatabaseEntryActivity extends AppCompatActivity implements AdapterV
         getSupportActionBar().setTitle("DataBase Entry Section");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
         newsRef = FirebaseDatabase.getInstance().getReference("newsfeeds");
         resRef = FirebaseDatabase.getInstance().getReference("results");
         NewsText = findViewById(R.id.news_text_id);
