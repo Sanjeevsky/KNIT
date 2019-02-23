@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
+        android:background="@drawable/background"
         android:layout_below="@id/toolbar_id_career">
 
         <RelativeLayout
@@ -40,7 +41,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/expandablelayout1_career"
-                android:background="#ffff"
                 app:ael_duration="400"
                 android:layout_below="@+id/career_development_id"
                 app:ael_expanded="false"
@@ -76,7 +76,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/expandablelayout2_career"
-                android:background="#ffff"
                 app:ael_duration="400"
                 android:layout_below="@+id/student_module_id"
                 app:ael_expanded="false"
@@ -112,10 +111,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/expandablelayout3_career"
-                android:background="#ffff"
+                android:background="@drawable/expandable_border"
                 app:ael_duration="400"
                 android:layout_below="@+id/training_button_id"
                 app:ael_expanded="false"
+                android:padding="5dp"
                 app:ael_interpolator="accelerate"
                 app:ael_orientation="vertical"
                 android:layout_marginBottom="5dp">
@@ -694,10 +694,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/expandablelayout4_career"
-                android:background="#ffff"
+                android:background="@drawable/expandable_border"
                 app:ael_duration="400"
                 android:layout_below="@+id/internship_button_id"
                 app:ael_expanded="false"
+                android:padding="5dp"
                 app:ael_interpolator="accelerate"
                 app:ael_orientation="vertical"
                 android:layout_marginBottom="5dp">

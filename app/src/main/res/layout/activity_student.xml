@@ -11,13 +11,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/toolbar_id"
         android:background="@color/colorPrimary"
-        android:layout_marginBottom="10dp"
         app:titleTextColor="#ffffff"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
+        android:background="@drawable/background"
         android:layout_below="@id/toolbar_id">
         <RelativeLayout
             android:layout_width="match_parent"
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/student_academics_btn"
-                android:background="#ffff"
+                android:padding="5dp"
                 app:ael_duration="400"
                 app:ael_expanded="false"
                 app:ael_interpolator="accelerate"
@@ -76,7 +76,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/update_student_profile"
-                android:background="#ffff"
                 android:layout_marginBottom="5dp"
                 app:ael_duration="400"
                 app:ael_expanded="false"
@@ -113,7 +112,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/download_provisional_certi"
-                android:background="#fff"
                 app:ael_duration="400"
                 app:ael_expanded="false"
                 app:ael_interpolator="accelerate"
@@ -137,7 +135,6 @@
                 android:layout_below="@id/expandableLayout3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-
                 android:background="@drawable/round_corner_button"
                 android:layout_marginBottom="5dp"
                 android:drawableLeft="@drawable/dropdown"
@@ -151,7 +148,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/student_welfare"
-                android:background="#fff"
                 app:ael_duration="400"
                 android:layout_marginBottom="5dp"
                 app:ael_expanded="false"
@@ -185,7 +181,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/round_corner_button"
-
                 android:drawableLeft="@drawable/dropdown"
                 android:elevation="10dp"
                 android:layout_marginBottom="5dp"
@@ -198,7 +193,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/student_bodies"
-                android:background="#fff"
+                android:background="@drawable/expandable_border"
+                android:padding="5dp"
                 app:ael_duration="400"
                 app:ael_expanded="false"
                 app:ael_interpolator="accelerate"
@@ -206,11 +202,6 @@
                 <ScrollView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
-                    <android.support.v7.widget.CardView
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:elevation="20dp"
-                        app:cardCornerRadius="5dp">
 
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -253,7 +244,6 @@
                                 android:src="@drawable/knit_boies" />
 
                         </LinearLayout>
-                    </android.support.v7.widget.CardView>
 
                 </ScrollView>
 
@@ -263,4 +253,4 @@
 
     </ScrollView>
 
-        </RelativeLayout>
+</RelativeLayout>

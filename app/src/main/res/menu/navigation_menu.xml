@@ -32,7 +32,7 @@
     <menu>
         <item
             android:title="Developer's Desk"
-            android:icon="@drawable/knitlogo"
+            android:icon="@drawable/support_icon"
             android:id="@+id/developers" />
     </menu>
 

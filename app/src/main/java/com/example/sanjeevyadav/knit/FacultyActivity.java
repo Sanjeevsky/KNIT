@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
@@ -11,6 +13,7 @@ import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 public class FacultyActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
+    private Animation nothingtocome;
     private Button applied_button,civil_button,electrical_button,electronic_button,mechanical_button,computer_button;
     private ExpandableRelativeLayout expandableLayout1,expandableLayout2,expandableLayout3,expandableLayout4,expandableLayout5,expandableLayout6;
     @Override
@@ -30,8 +33,20 @@ public class FacultyActivity extends AppCompatActivity {
         expandableLayout4=findViewById(R.id.expandablelayout4_faculty);
         expandableLayout5=findViewById(R.id.expandablelayout5_faculty);
         expandableLayout6=findViewById(R.id.expandablelayout6_faculty);
-
         applied_button=findViewById(R.id.faculty_applied_button_id);
+        civil_button=findViewById(R.id.faculty_civil_button_id);
+        electrical_button=findViewById(R.id.faculty_electrical_button_id);
+        electronic_button=findViewById(R.id.faculty_electronics_button_id);
+        mechanical_button=findViewById(R.id.faculty_mechanical_button_id);
+        computer_button=findViewById(R.id.faculty_computer_button_id);
+        nothingtocome= AnimationUtils.loadAnimation(this,R.anim.nothingtocome);
+        applied_button.startAnimation(nothingtocome);
+        civil_button.startAnimation(nothingtocome);
+        electrical_button.startAnimation(nothingtocome);
+        electronic_button.startAnimation(nothingtocome);
+        mechanical_button.startAnimation(nothingtocome);
+        computer_button.startAnimation(nothingtocome);
+
         applied_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +75,6 @@ public class FacultyActivity extends AppCompatActivity {
                 }
             }
         });
-        civil_button=findViewById(R.id.faculty_civil_button_id);
         civil_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -89,7 +103,6 @@ public class FacultyActivity extends AppCompatActivity {
                 }
             }
         });
-        electrical_button=findViewById(R.id.faculty_electrical_button_id);
         electrical_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -118,7 +131,6 @@ public class FacultyActivity extends AppCompatActivity {
                 }
             }
         });
-        electronic_button=findViewById(R.id.faculty_electronics_button_id);
         electronic_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -147,7 +159,6 @@ public class FacultyActivity extends AppCompatActivity {
                 }
             }
         });
-        mechanical_button=findViewById(R.id.faculty_mechanical_button_id);
         mechanical_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -176,7 +187,6 @@ public class FacultyActivity extends AppCompatActivity {
                 }
             }
         });
-        computer_button=findViewById(R.id.faculty_computer_button_id);
         computer_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

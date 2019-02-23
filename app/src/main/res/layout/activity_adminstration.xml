@@ -16,12 +16,13 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:fillViewport="true"
         android:layout_below="@id/toolbar_id">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@drawable/theme"
+            android:background="@drawable/background"
             android:padding="10dp"
             >
 
@@ -41,6 +42,7 @@
                     android:layout_height="wrap_content"
                     android:text="Administration"
                     android:layout_gravity="center"
+                    android:textColor="#D3CECE"
                     android:gravity="center"
                     android:layout_marginBottom="15dp"
                     android:textSize="18dp"
@@ -49,6 +51,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="14dp"
+                    android:textColor="#D3CECE"
                     android:text="The Institute is an Autonomous Statutory Organization registered under Societies Registration Act of Uttar Pradesh. It is fully financially and administratively controlled by the U.P. Government. The affairs of the Institute are centrally managed by the Board of Governors (BOG) with Hon’ble Minister of Technical Education, U.P. as the Chairman. There are different Committees such as Finance Committee, Administrative Committee, Academic Committee, Purchase Committee, and Building And Works Committee etc to assist the BOG in administering the the Institute. The academic matters of Students are governed by A.K.T.U, Lucknow. Director is Head of the Institute who is assisted by Professors and officers in various capacities in running the affairs of the Institute.
 "/>
 
@@ -73,7 +76,7 @@
                             android:textSize="14dp"
                             android:id="@+id/pdf_laws"
                             android:layout_width="match_parent"
-                            android:textColor="#ff0000"/>
+                            android:textColor="#F7DD09"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -86,7 +89,7 @@
                         android:textSize="14dp"
                         android:id="@+id/pdf_boards_of_governers"
                         android:layout_width="match_parent"
-                        android:textColor="#ff0000"/>
+                        android:textColor="#F7DD09"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -99,7 +102,7 @@
                         android:textSize="14dp"
                         android:id="@+id/pdf_minutes_bog"
                         android:layout_width="match_parent"
-                        android:textColor="#ff0000"/>
+                        android:textColor="#F7DD09"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -188,7 +191,7 @@
                         android:textSize="14dp"
                         android:id="@+id/pdf_member_of_academics"
                         android:layout_width="match_parent"
-                        android:textColor="#ff0000"/>
+                        android:textColor="#F7DD09"/>
                 </LinearLayout>
 
                 <LinearLayout
@@ -305,7 +308,7 @@
                         android:text="List of Office-Bearers"
                         android:textSize="14dp"
                         android:layout_width="match_parent"
-                        android:textColor="#ff0000"
+                        android:textColor="#F7DD09"
                         android:id="@+id/pdf_list_of_office_bearers"/>
                 </LinearLayout>
 

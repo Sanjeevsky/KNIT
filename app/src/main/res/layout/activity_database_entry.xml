@@ -11,7 +11,6 @@
         android:layout_height="wrap_content"
         android:id="@+id/toolbar_id"
         android:background="@color/colorPrimary"
-        android:layout_marginBottom="10dp"
         app:titleTextColor="#ffffff"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
 
@@ -20,6 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:background="@drawable/background"
             android:padding="10dp">
             <Button
                 android:id="@+id/news_update_expandable"
@@ -28,7 +29,7 @@
                 android:background="@drawable/round_corner_button"
                 android:drawableLeft="@drawable/dropdown"
                 android:elevation="10dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:padding="15dp"
                 android:text="News Update Interface"
                 android:textColor="#fff" />
@@ -39,9 +40,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/news_update_expandable"
-                android:background="#ffff"
+                android:background="@drawable/expandable_border"
                 app:ael_duration="400"
                 app:ael_expanded="false"
+                android:padding="5dp"
                 app:ael_interpolator="accelerate"
                 app:ael_orientation="vertical"
                 android:layout_marginBottom="5dp">
@@ -122,7 +124,7 @@
                 android:background="@drawable/round_corner_button"
                 android:drawableLeft="@drawable/dropdown"
                 android:elevation="10dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="10dp"
                 android:padding="15dp"
                 android:text="Result Update Interface"
                 android:textColor="#fff"
@@ -133,8 +135,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/result_update_expandable"
-                android:background="#ffff"
+                android:background="@drawable/expandable_border"
                 app:ael_duration="400"
+                android:padding="5dp"
                 app:ael_expanded="false"
                 app:ael_interpolator="accelerate"
                 app:ael_orientation="vertical"
