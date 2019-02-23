@@ -3,6 +3,9 @@ package com.example.sanjeevyadav.knit;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.ImageView;
 
 public class DirectorActivity extends AppCompatActivity {
     private Toolbar toolbar;

@@ -11,9 +11,12 @@ import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 
 public class MainFragment extends Fragment {
 
+    private Animation smalltobig;
     private CardView resCard,aboutCard,studentCard,developerCard,academicsCard,calenderCard;
         public MainFragment() {
         }
@@ -29,12 +32,21 @@ public class MainFragment extends Fragment {
     @Override
     public void onStart() {
         super.onStart();
+
+        smalltobig= AnimationUtils.loadAnimation(getContext(),R.anim.smalltobig);
         resCard=view.findViewById(R.id.result_cardview_id);
         aboutCard=view.findViewById(R.id.about_cardview_id);
         studentCard=view.findViewById(R.id.studnets_cardview_id);
         developerCard=view.findViewById(R.id.devlopers_cardview_id);
         academicsCard=view.findViewById(R.id.academic_cardview_id);
         calenderCard=view.findViewById(R.id.calendar_cardview_id);
+        resCard.startAnimation(smalltobig);
+        aboutCard.startAnimation(smalltobig);
+        studentCard.startAnimation(smalltobig);
+        developerCard.startAnimation(smalltobig);
+        academicsCard.startAnimation(smalltobig);
+        calenderCard.startAnimation(smalltobig);
+
         resCard.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

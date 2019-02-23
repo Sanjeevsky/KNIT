@@ -12,6 +12,8 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -50,6 +52,7 @@ public class DatabaseEntryActivity extends AppCompatActivity implements AdapterV
     private ExpandableLayout expandableLayout1,expandableLayout2;
     private Button NewsExpand,ResultExpand;
     private Toolbar toolbar;
+    private Animation nothingtocome;
 
 
     @Override
@@ -85,6 +88,10 @@ public class DatabaseEntryActivity extends AppCompatActivity implements AdapterV
         expandableLayout1=findViewById(R.id.expandableLayout1_news);
         ResultExpand=findViewById(R.id.result_update_expandable);
         expandableLayout2=findViewById(R.id.expandableLayout1_result);
+        nothingtocome= AnimationUtils.loadAnimation(this,R.anim.nothingtocome);
+        NewsExpand.startAnimation(nothingtocome);
+        ResultExpand.startAnimation(nothingtocome);
+
         mAuth=FirebaseAuth.getInstance();
 
         NewsExpand.setOnClickListener(new View.OnClickListener() {

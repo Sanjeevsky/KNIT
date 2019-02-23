@@ -17,6 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fillViewport="true"
+        android:background="@drawable/background"
         android:layout_below="@+id/toolbar_id_academic">
 
         <RelativeLayout
@@ -40,32 +41,30 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/expandablelayout1_academic"
-                android:background="#ffff"
+                android:background="@drawable/expandable_border"
                 app:ael_duration="400"
+                android:padding="5dp"
                 android:layout_below="@+id/admission_button_id"
                 app:ael_expanded="false"
                 app:ael_interpolator="accelerate"
                 app:ael_orientation="vertical"
                 android:layout_marginBottom="5dp">
 
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:elevation="20dp"
-                    android:padding="10dp"
-                    app:cardCornerRadius="5dp">
-
                     <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fillViewport="true">
 
-                        <TextView
+                        <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:id="@+id/admission_textview_id"/>
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:id="@+id/admission_textview_id"/>
+                        </LinearLayout>
                     </ScrollView>
-                </android.support.v7.widget.CardView>
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
             <Button
@@ -85,8 +84,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/expandablelayout2_academic"
-                android:background="#ffff"
+                android:background="@drawable/expandable_border"
                 app:ael_duration="400"
+                android:padding="5dp"
                 android:layout_below="@+id/fee_button_id"
                 app:ael_expanded="false"
                 app:ael_interpolator="accelerate"
@@ -152,20 +152,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/expandablelayout3_academic"
-                android:background="#ffff"
+                android:background="@drawable/expandable_border"
                 app:ael_duration="400"
                 android:layout_below="@+id/placement_button_id"
                 app:ael_expanded="false"
                 app:ael_interpolator="accelerate"
+                android:padding="5dp"
                 app:ael_orientation="vertical"
                 android:layout_marginBottom="5dp">
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:elevation="20dp"
-                    android:padding="10dp"
-                    app:cardCornerRadius="5dp">
 
                     <ScrollView
                         android:layout_width="match_parent"
@@ -177,7 +171,6 @@
                             android:layout_height="match_parent"
                             android:id="@+id/placement_textview_id"/>
                     </ScrollView>
-                </android.support.v7.widget.CardView>
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
             <Button
@@ -197,36 +190,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:id="@+id/expandablelayout4_academic"
-                android:background="#ffff"
+                android:background="@drawable/expandable_border"
                 app:ael_duration="400"
                 android:layout_below="@+id/coursestudy_button_id"
                 app:ael_expanded="false"
                 app:ael_interpolator="accelerate"
-                app:ael_orientation="vertical"
-                android:layout_marginBottom="5dp">
-
-                <android.support.v7.widget.CardView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:elevation="20dp"
-                    android:padding="10dp"
-                    app:cardCornerRadius="5dp">
+                android:padding="5dp"
+                app:ael_orientation="vertical">
 
                     <ScrollView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:fillViewport="true">
-                        <HorizontalScrollView
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent">
-                        <RelativeLayout
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:orientation="vertical"
                             android:id="@+id/coursestudylayout_id">
 
                                 <TextView
                                     android:layout_width="match_parent"
-                                    android:layout_height="match_parent"
+                                    android:layout_height="wrap_content"
                                     android:background="#fff"
                                     android:id="@+id/courselayout_id"
                                     android:layout_marginBottom="20dp"
@@ -236,8 +220,7 @@
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
                                     android:id="@+id/courselayout2_id"
-                                    android:layout_marginBottom="10dp"
-                                    android:layout_below="@id/courselayout_id">
+                                    android:layout_marginBottom="10dp">
                                     <TableLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content">
@@ -245,7 +228,7 @@
                                             android:paddingRight="3dp"
                                             android:layout_marginRight="3dp">
                                             <TextView
-                                                android:text="(A) UNDERGRADUATE PROGRAMMES (B.TECH.) (4 YEARS / 8 SEMESTERS)"
+                                                android:text="(A) UNDERGRADUATE PROGRAMMES (B.TECH.)\n (4 YEARS / 8 SEMESTERS)"
                                                 android:textColor="#5F0D0D"
                                                 android:textStyle="bold" />
                                         </TableRow>
@@ -376,16 +359,14 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@+id/courselayout2_id"
                                     android:id="@+id/courselayout3_id"
-                                    android:layout_marginBottom="10dp"/>
+                                    android:layout_marginBottom="20dp"/>
                                 <LinearLayout
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
                                     android:layout_marginBottom="20dp"
-                                    android:id="@+id/courselayout4_id"
-                                    android:layout_below="@id/courselayout3_id">
+                                    android:id="@+id/courselayout4_id">
                                     <TableLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content">
@@ -394,7 +375,7 @@
                                             android:layout_marginBottom="20dp"
                                             android:layout_marginRight="3dp">
                                             <TextView
-                                                android:text="(B) MASTER OF COMPUTER APPLICATION (M.C.A.)- (3 YEARS / 6 SEMESTERS)   :   60"
+                                                android:text="(B) MASTER OF COMPUTER APPLICATION-\n(3 YEARS / 6 SEMESTERS)   :   60"
                                                 android:textColor="#5F0D0D"
                                                 android:textStyle="bold" />
                                         </TableRow>
@@ -406,7 +387,7 @@
                                             android:paddingRight="3dp"
                                             android:layout_marginRight="3dp">
                                             <TextView
-                                                android:text="(C) M.TECH. (FULL TIME) 4  SEMESTERS (10 GENERAL + 5 SPONSORED + 3 SC/ST)"
+                                                android:text="(C) M.TECH. (FULL TIME) 4  SEMESTERS \n(10 GENERAL + 5 SPONSORED + 3 SC/ST)"
                                                 android:textColor="#5F0D0D"
                                                 android:textStyle="bold" />
                                         </TableRow>
@@ -426,7 +407,7 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Civil Engineering\n(Geotechnical &amp; Geoenvironmental Engineering)"
+                                                android:text="Civil Engineering\n(Geotechnical &amp;\n Geoenvironmental Engineering)"
                                                 android:paddingRight="7dp" />
                                             <TextView
                                                 android:text="18"
@@ -479,8 +460,7 @@
                                     android:layout_height="wrap_content"
                                     android:orientation="vertical"
                                     android:layout_marginBottom="20dp"
-                                    android:id="@+id/courselayout5_id"
-                                    android:layout_below="@id/courselayout4_id">
+                                    android:id="@+id/courselayout5_id">
                                     <TableLayout
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content">
@@ -488,7 +468,7 @@
                                             android:paddingRight="3dp"
                                             android:layout_marginRight="3dp">
                                             <TextView
-                                                android:text="(D) M.TECH (PART TIME) 6 SEMESTERS (10 GEN. + 3 SC/ST)"
+                                                android:text="(D) M.TECH (PART TIME) 6 SEMESTERS\n (10 GEN. + 3 SC/ST)"
                                                 android:textColor="#5F0D0D"
                                                 android:textStyle="bold" />
                                         </TableRow>
@@ -508,7 +488,7 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Civil Engineering\n(Geotechnical Engineering/Water Resources Engineering)"
+                                                android:text="Civil Engineering\n(Geotechnical Engineering/\nWater Resources Engineering)"
                                                 android:paddingRight="7dp" />
                                             <TextView
                                                 android:text="13"
@@ -521,7 +501,7 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Electrical Engineering\n(Solid State Controls/Power Systems)"
+                                                android:text="Electrical Engineering\n(Solid State Controls/\nPower Systems)"
                                                 android:paddingRight="7dp" />
                                             <TextView
                                                 android:text="13"
@@ -534,7 +514,7 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Mechanical Engineering\n(Machine Desing/Industrial Systems Engineering)"
+                                                android:text="Mechanical Engineering\n(Machine Desing/\nIndustrial Systems Engineering)"
                                                 android:paddingRight="7dp" />
                                             <TextView
                                                 android:text="13"
@@ -547,7 +527,7 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Electronics Engineering(Digital Electronics &amp; Systems)"
+                                                android:text="Electronics Engineering\n(Digital Electronics &amp; Systems)"
                                                 android:paddingRight="7dp" />
                                             <TextView
                                                 android:text="13"
@@ -559,12 +539,9 @@
                                 <TextView
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:id="@+id/courselayout6_id"
-                                    android:layout_below="@id/courselayout5_id" />
-                        </RelativeLayout>
-                        </HorizontalScrollView>
+                                    android:id="@+id/courselayout6_id" />
+                        </LinearLayout>
                     </ScrollView>
-                </android.support.v7.widget.CardView>
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
         </RelativeLayout>

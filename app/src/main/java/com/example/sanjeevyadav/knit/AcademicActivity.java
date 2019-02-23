@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -14,6 +16,7 @@ import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 public class AcademicActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
+    private Animation nothingtocome;
     private Button admissionButton,feeButton,placementButton,coursestudyButton;
     private TextView admissionTextview,feeTextview,feeFirst,feeSecond,placementTextview,coursestudyTextview,coursestudyTextview1;
     private ExpandableRelativeLayout expandableLayout1,expandableLayout2,expandableLayout3,expandableLayout4;
@@ -34,104 +37,18 @@ public class AcademicActivity extends AppCompatActivity {
         expandableLayout4=findViewById(R.id.expandablelayout4_academic);
 
         admissionButton=findViewById(R.id.admission_button_id);
-        expandableLayout1=findViewById(R.id.expandablelayout1_academic);
+        coursestudyButton=findViewById(R.id.coursestudy_button_id);
+        placementButton=findViewById(R.id.placement_button_id);
+        feeButton=findViewById(R.id.fee_button_id);
+
+        nothingtocome=AnimationUtils.loadAnimation(this,R.anim.nothingtocome);
+        admissionButton.startAnimation(nothingtocome);
+        feeButton.startAnimation(nothingtocome);
+        placementButton.startAnimation(nothingtocome);
+        coursestudyButton.startAnimation(nothingtocome);
+
         admissionTextview=findViewById(R.id.admission_textview_id);
-        admissionTextview.setText(Html.fromHtml("<h3><font color=\"#5F0D0D\">Bachelor of Technology (B.Tech) Programmes</h3>\n" +
-                "\n" +
-                "\n" +
-                "<ul class=\"Asd1\">\n" +
-                "  <li><strong>(a) Eligibility Requirements</strong> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class=\"email_lnk\">    </span><br>\n" +
-                "  As notified by the State Government of Uttar Pradesh. </li>\n" +
-                "  <li><strong>(b) Mode of Admission</strong><br>\n" +
-                "    <strong>(i)</strong> The admission to <strong>First Year B.Tech. and M.C.A. Programmes</strong> will be made through\n" +
-                "the counseling conducted by Dr. A.P.J. Abdul Kalam Technical University based on the merit of\n" +
-                "candidates in the Uttar Pradesh State Entrance Examination (UPSEE) \n" +
-                "except for <strong>Other State\n" +
-                "Nominees</strong> which are nominated by the Government of India.<br>\n" +
-                "<strong>(ii)</strong> The candidate after participating in the counseling is required to report at the institute on\n" +
-                "the date mentioned in the Allotment letter.<br>\n" +
-                "<strong>(iii)</strong> The Candidate is required to submit the following documents at the time of reporting at\n" +
-                "the Institute for registration:\n" +
-                "  \n" +
-                "  </li><br><ul class=\"UL2\">\n" +
-                "<li>Allotment Letter issued by UPSEE</li>\n" +
-                "<li>Admit Card by SEE-AKTU, if admit card is submitted at counseling centre, then\n" +
-                "photocopy of the admit card</li>\n" +
-                "<li>Original Certificate of high School (for proof of the age)</li>\n" +
-                "<li>Original mark sheet of qualifying (10+2) examination</li>\n" +
-                "<li>Original Character Certificate in prescribed format\n" +
-                "issued by Head of the Institute last attended</li>\n" +
-                "<li>Original Transfer / Migration Certificate of the Institute last attended.</li>\n" +
-                "<li>Category Certificate (If opted for reservation)</li>\n" +
-                "<li>SubCategory\n" +
-                "Certificate if applicable</li>\n" +
-                "<li>Weightage Certificate if applicable</li>\n" +
-                "<li>Medical certificate in prescribed format</li>\n" +
-                "<li>Income Certificate from those candidates (Gen/OBC/SC/ST/Minorities) whose\n" +
-                "parents’/guardians’ annual income from all the sources is ` one lac or less than\n" +
-                "` one lac.</li>\n" +
-                "<li>Receipt of fee deposited at counseling centre</li>\n" +
-                "<li>Two Passport Size Photographs</li>\n" +
-                "<li>Medical certificate in prescribed format</li>\n" +
-                "<li>Affidavit In case of gap in studies</li><br>\n" +
-                "<strong>Two Sets</strong> of photocopies of all the documents/certificates mentioned above are also\n" +
-                "required to be submitted along with two recent passport size colour photographs<br>\n" +
-                "  <br><strong>&nbsp;&nbsp;(iv)</strong> No direct admission are made to Second Semester of First Year or subsequent years\n" +
-                "of the course, except for the Diploma Holders & B.Sc. graduates who are admitted to\n" +
-                "Second Year (third semester) through the counseling conducted by the A.K.T.U on the basis of merit of candidates in SEE-AKTU<br>\n" +
-                "</li>\n" +
-                "<br><strong>&nbsp;&nbsp;(v)</strong> Admission on migration/ transfer from other University/College is not permitted.<br>\n" +
-                "</li>\n" +
-                "<br><strong>&nbsp;&nbsp;(vi) </strong>Domicile requirement, age limit and medical standards are the same as prescribed in<br>\n" +
-                "  the information Brochure of SEE-AKTU<br>\n" +
-                "<br>\n" +
-                "</li><strong>&nbsp;&nbsp;<li>(C) Reservations</strong><br>\n" +
-                "&nbsp;&nbsp;&nbsp;&nbsp;(As notified in the Information Brochure of SEE-AKTU</li>\n" +
-                "\n" +
-                "<br><br>\n" +
-                "</ul>\n" +
-                "\n" +
-                "</ul>\n" +
-                "</ul>\n" +
-                "\n" +
-                "\t\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "\n" +
-                "<br>\n" +
-                "\n" +
-                "\n" +
-                "  <h3><font color=\"#5F0D0D\">Master of Computer Application (M.C.A.) Programme</h3>\n" +
-                "\n" +
-                "\n" +
-                "<ul class=\"Asd1\">\n" +
-                "<li> <strong>(a) Eligibility Requirements </strong><br>As notified in the information Brochure of SEE-AKTU.</li>\n" +
-                "<li> <strong>(b) Mode of Admission </strong><br>Mode of admission to MCA programme is same as for the Undergraduates Programme.</li>\n" +
-                "<li> <strong>(c) Reservations</strong> <br>As notified in the information Brochure of SEE-AKTU.</li>\n" +
-                "</ul><br><h3><font color=\"#5F0D0D\">M.Tech. (FullTime)Programmes</h3>\n" +
-                "\n" +
-                "Admission to the above mentioned\n" +
-                "programmes is made on the basis of merit of the valid\n" +
-                "GATE Score by AKTU, Lucknow. However, in case of non-availability\n" +
-                "of sufficient GATE\n" +
-                "qualified candidates, NON GATE\n" +
-                "candidates can be considered on vacant seats.</li>\n" +
-                "</ul><br><h3><font color=\"#5F0D0D\">M.Tech. (PartTime)Programmes</h3>\n" +
-                "\n" +
-                "<ul class=\"Asd1\">\n" +
-                "<li><strong>(a) Eligibility Requirements</strong><br>The eligibility requirements shall be as per norms of Dr. A.P.J. Abdul Kalam Technical University, Lucknow.</li>\n" +
-                "<li><strong>(b) Mode of Admission</strong><br>Admission is made on the basis of merit of a candidate in the written test / interview\n" +
-                "conducted by the department concerned on a specified date.</li>\n" +
-                "</ul><br><h3><font color=\"#5F0D0D\">Doctoral Programmes</h3>\n" +
-                "\n" +
-                "<ul class=\"Asd1\">\n" +
-                "<li><strong>(a) Eligibility Requirements</strong><br>The eligibility requirements are as per the norms of Dr. A.P.J. Abdul Kalam Technical University, Lucknow.</li>\n" +
-                "<li><strong>(b) Mode of Registration</strong><br>The application for registration is required to be made on the prescribed application form\n" +
-                "of U.P. Technical University, Lucknow.</li>\n" +
-                "</ul>"));
+        admissionTextview.setText(Html.fromHtml(getString(R.string.academic_admission)));
         admissionButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -154,8 +71,6 @@ public class AcademicActivity extends AppCompatActivity {
             }
         });
 
-        feeButton=findViewById(R.id.fee_button_id);
-        expandableLayout2=findViewById(R.id.expandablelayout2_academic);
         feeTextview=findViewById(R.id.fee_textview_id);
         feeTextview.setText(Html.fromHtml("<h3><font color=\"#5F0D0D\">FEE AND OTHER CHARGES FOR FIRST YEAR STUDENTS</h3>\n" +
                 "The schedule of fee  to be paid by each student of First Year B.Tech, M.C.A., M.Tech., (Full Time) &amp; M.Tech (Part Time) is given below :<br>\n" +
@@ -198,10 +113,9 @@ public class AcademicActivity extends AppCompatActivity {
                 startActivity(feeSecondIntent);
             }
         });
-        placementButton=findViewById(R.id.placement_button_id);
-        expandableLayout3=findViewById(R.id.expandablelayout3_academic);
+
         placementTextview=findViewById(R.id.placement_textview_id);
-        placementTextview.setText(Html.fromHtml(("<h3><font color=\"#5F0D0D\">Vocational Training</h3>\n" +
+        placementTextview.setText(Html.fromHtml("<h3><font color=\"#5F0D0D\">Vocational Training</h3>\n" +
                 "B.Tech students are required to undergo ‘Vocational Training’ as per the provision of training in\n" +
                 "their curricula arranged by the institute during summer vacation. The students will bear the traveling\n" +
                 "and other expenses for the training. Marks assigned for the training are awarded on the basis of\n" +
@@ -236,7 +150,7 @@ public class AcademicActivity extends AppCompatActivity {
                 "<p>DSCL </p>\n" +
                 "<p>Lohia Starlinger Ltd </p>\n" +
                 "<p>Mediatek india </p>\n"+
-                "<p>Reed Technology </p>")));
+                "<p>Reed Technology </p>"));
         placementButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -258,27 +172,25 @@ public class AcademicActivity extends AppCompatActivity {
             }
         });
 
-        coursestudyButton=findViewById(R.id.coursestudy_button_id);
-        expandableLayout4=findViewById(R.id.expandablelayout4_academic);
         coursestudyTextview=findViewById(R.id.courselayout6_id);
         coursestudyTextview1=findViewById(R.id.courselayout3_id);
         coursestudyTextview.setText(Html.fromHtml("<h3><font color=\"#5F0D0D\">(E) Doctoral Programmes (Ph. D.)</h3>\n" +
                 "\n" +
                 "<ul class=\"UL1\">\n" +
-                "<li> Civil Engineering</li>\n" +
-                "  <li>Computer Science & Engineering</li>\n" +
-                "  <li>Electrical Engineering</li>\n" +
-                "  <li>Electronics Engineering</li>\n" +
-                "  <li>Mechanical Engineering</li>\n" +
-                "  <li>Humanities and Applied sciences</li>\n" +
-                " "));
-        coursestudyTextview1.setText(Html.fromHtml("*AICTE sanctioned intake, ** 10% additional intake in lieu of the Fee Waver Scheme<br><br>\n" +
+                "<li> Civil Engineering</li><br>" +
+                "<li>Computer Science & Engineering</li><br>" +
+                "<li>Electrical Engineering</li><br>" +
+                "<li>Electronics Engineering</li><br>" +
+                "<li>Mechanical Engineering</li><br>" +
+                "<li>Humanities and Applied sciences</li>"));
+        coursestudyTextview1.setText(Html.fromHtml("*AICTE sanctioned intake, ** 10% additional intake in lieu of the Fee Waver Scheme<br><br><p>" +
                 "<h3>Note:</h3>" +
+                "\n"+
                 "<li><strong>(i)</strong> The Institution under the <strong>AICTE Tuition Fee Waiver Scheme</strong> has been allowed to admit 10%\n" +
-                "of its sanctioned intake as an additional intake in the same discipline/branch of study.</li>\n" +
-                "<li><strong>(ii) </strong>In addition to the above, a total number of <strong>10 students</strong> as <strong>Other States Nominees</strong> are also admitted as per norms of Govt. of India.</li>\n" +
-                "<li><strong>(iii) 5%</strong> seats on the total sanctioned intake as approved by AICTE are also available for Non Resident\n" +
-                "Indians <strong>(NRI).</strong></li>\n"));
+                "of its sanctioned intake as an additional intake in the same discipline/branch of study.</li><br>\n" +
+                "<li><strong>(ii) </strong>In addition to the above, a total number of <strong>10 students</strong> as <strong>Other States Nominees</strong> are also admitted as per norms of Govt. of India.</li></p>\n" +
+                "<br><li><strong>(iii) 5%</strong> seats on the total sanctioned intake as approved by AICTE are also available for Non Resident\n" +
+                "Indians <strong>(NRI).</strong></li><br>\n"));
         coursestudyButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

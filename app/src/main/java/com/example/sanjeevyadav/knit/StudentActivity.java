@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -13,6 +15,8 @@ import android.widget.TextView;
 import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 
 public class StudentActivity extends AppCompatActivity {
+
+    private Animation nothingtocome;
     ExpandableRelativeLayout expandableLayout1,expandableLayout2,expandableLayout3,expandableLayout4,expandableLayout5;
     Button StudentAcademicsButton,UpdateStudentProfile,DownloadProvisionalCerti,StudentWelfare,StudentBodies;
     Button t1,t2,t3;
@@ -40,6 +44,13 @@ public class StudentActivity extends AppCompatActivity {
         expandableLayout2 = findViewById(R.id.expandableLayout2);
         expandableLayout3 = findViewById(R.id.expandableLayout3);
         expandableLayout5=findViewById(R.id.expandableLayout5);
+
+        nothingtocome= AnimationUtils.loadAnimation(this,R.anim.nothingtocome);
+        StudentAcademicsButton.startAnimation(nothingtocome);
+        UpdateStudentProfile.startAnimation(nothingtocome);
+        DownloadProvisionalCerti.startAnimation(nothingtocome);
+        StudentWelfare.startAnimation(nothingtocome);
+        StudentBodies.startAnimation(nothingtocome);
 
 
         StudentAcademicsButton.setOnClickListener(new View.OnClickListener() {

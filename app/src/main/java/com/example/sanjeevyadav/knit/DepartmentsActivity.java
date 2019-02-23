@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.text.Html;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -14,6 +16,7 @@ import com.github.aakira.expandablelayout.ExpandableRelativeLayout;
 public class DepartmentsActivity extends AppCompatActivity {
 
     private Toolbar toolbar;
+    private Animation nothingtocome;
     private Button applied_button,civil_button,electrical_button,electronics_button,mechanical_button,computer_button,workshop_button,library_button;
     private TextView applied_textview,civil_textview,electrical_textview,electronics_textview,mechanical_textview,computer_textview,workshop_textview,workshop_textview2,computer_textvie2,library_textview,library_textview2;
     private ExpandableRelativeLayout expandableLayout1,expandableLayout2,expandableLayout3,expandableLayout4,expandableLayout5,expandableLayout6,expandableLayout7,expandableLayout8;
@@ -36,8 +39,25 @@ public class DepartmentsActivity extends AppCompatActivity {
         expandableLayout6=findViewById(R.id.expandablelayout6_depart);
         expandableLayout7=findViewById(R.id.expandablelayout7_depart);
         expandableLayout8=findViewById(R.id.expandablelayout8_depart);
-
         applied_button=findViewById(R.id.department_id_applied_science);
+        civil_button=findViewById(R.id.department_id_civil_engi);
+        electrical_button=findViewById(R.id.department_id_electrical_engi);
+        electronics_button=findViewById(R.id.department_id_electronics_engi);
+        mechanical_button=findViewById(R.id.department_id_mechanical_engi);
+        computer_button=findViewById(R.id.department_id_computer_engi);
+        workshop_button=findViewById(R.id.department_id_workshop);
+        library_button=findViewById(R.id.department_id_library);
+
+        nothingtocome=AnimationUtils.loadAnimation(this,R.anim.nothingtocome);
+        applied_button.startAnimation(nothingtocome);
+        civil_button.startAnimation(nothingtocome);
+        electrical_button.startAnimation(nothingtocome);
+        electronics_button.startAnimation(nothingtocome);
+        mechanical_button.startAnimation(nothingtocome);
+        computer_button.startAnimation(nothingtocome);
+        workshop_button.startAnimation(nothingtocome);
+        library_button.startAnimation(nothingtocome);
+
         applied_textview=findViewById(R.id.applied_textview_id);
         applied_textview.setText(Html.fromHtml("<p>  \n" +
                 "The Applied Sciences and Humanities Department is an allied department which serves as a\n" +
@@ -89,7 +109,6 @@ public class DepartmentsActivity extends AppCompatActivity {
                 }
             }
         });
-        civil_button=findViewById(R.id.department_id_civil_engi);
         civil_textview=findViewById(R.id.civil_textview_id);
         civil_textview.setText(Html.fromHtml(" The Civil Engineering Department is one of the oldest departments of the institute. The department\n" +
                 "has a well qualified faculty and technical supporting staff. The department offers U.G. as well as\n" +
@@ -150,7 +169,6 @@ public class DepartmentsActivity extends AppCompatActivity {
                 }
             }
         });
-        electrical_button=findViewById(R.id.department_id_electrical_engi);
         electrical_textview=findViewById(R.id.electrical_textview_id);
         electrical_textview.setText(Html.fromHtml(" The Electrical Engineering Department is also one of the oldest departments of the Institute. The\n" +
                 "department has a well qualified faculty and technical supporting staff. All the laboratories of the\n" +
@@ -212,7 +230,6 @@ public class DepartmentsActivity extends AppCompatActivity {
                 }
             }
         });
-        electronics_button=findViewById(R.id.department_id_electronics_engi);
         electronics_textview=findViewById(R.id.electronics_textview_id);
         electronics_textview.setText(Html.fromHtml(" The Electronics Engineering Department offers both U.G. and P.G. (PartTime)\n" +
                 "courses. It has a\n" +
@@ -276,7 +293,6 @@ public class DepartmentsActivity extends AppCompatActivity {
                 }
             }
         });
-        mechanical_button=findViewById(R.id.department_id_mechanical_engi);
         mechanical_textview=findViewById(R.id.mechanical_textview_id);
         mechanical_textview.setText(Html.fromHtml("The Mechanical Engineering Department is among the oldest departments of the Institute. The\n" +
                 "department has a well qualified faculty and technical supporting staff. All the laboratories of the\n" +
@@ -341,7 +357,6 @@ public class DepartmentsActivity extends AppCompatActivity {
                 }
             }
         });
-        computer_button=findViewById(R.id.department_id_computer_engi);
         computer_textview=findViewById(R.id.computer_textview_id);
         computer_textview.setText(Html.fromHtml("Computer Science &amp; Engineering Department is the largest department of the Institute. It offers\n" +
                 "B.Tech. (Computer Science. &amp; Engineering), B.Tech. (Information Technology) and MCA\n" +
@@ -402,7 +417,6 @@ public class DepartmentsActivity extends AppCompatActivity {
                 }
             }
         });
-        workshop_button=findViewById(R.id.department_id_workshop);
         workshop_textview=findViewById(R.id.workshop_textview_id);
         workshop_textview.setText(Html.fromHtml("The workshop of the Institute sprawls over a large area having Fitting, Carpentry, Blacksmith,\n" +
                 "Welding, Foundry, Sheet Metal and Sand Testing Shops. Besides above, the workshop has an\n" +
@@ -452,7 +466,6 @@ public class DepartmentsActivity extends AppCompatActivity {
                 startActivity(workshopintent);
             }
         });
-        library_button=findViewById(R.id.department_id_library);
         library_textview=findViewById(R.id.library_textview_id);
         library_textview.setText(Html.fromHtml("Library is the soul of any professional institute. All the departments have also their own\n" +
                 "departmental libraries. The Central Library of the Institute is spacious, well equipped and fully\n" +
