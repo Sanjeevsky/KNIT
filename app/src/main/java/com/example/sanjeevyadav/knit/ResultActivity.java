@@ -1,6 +1,9 @@
 package com.example.sanjeevyadav.knit;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -26,6 +29,7 @@ public class ResultActivity extends AppCompatActivity {
     private Toolbar toolbar;
     private DatabaseReference databaseReference;
     private Context context;
+    private ProgressDialog loadingBar;
     private SwipeRefreshLayout swipeRefreshLayout;
 
     @Override
@@ -41,21 +45,49 @@ public class ResultActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Results");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+        context=ResultActivity.this;
 
-        RefreshSection();
+        databaseReference= FirebaseDatabase.getInstance().getReference("results");
+        databaseReference.keepSynced(true);
+
+        ConnectivityManager cm = (ConnectivityManager)this.getSystemService(this.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+        if(isConnected) {
+            RefreshSection();
+        }
+        else
+        {
+            Toast.makeText(ResultActivity.this,"Your Device is not connected to Internet",Toast.LENGTH_LONG).show();
+        }
         swipeRefreshLayout=findViewById(R.id.refresh_layout_id_result);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
 
-                RefreshSection();
-                swipeRefreshLayout.setRefreshing(false);
+                ConnectivityManager cm = (ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
+                NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+                boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+                if(isConnected) {
+                    RefreshSection();
+                    swipeRefreshLayout.setRefreshing(false);
+                }
+                else
+                {
+                    Toast.makeText(ResultActivity.this,"Your Device is not connected to Internet",Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
 
     private void RefreshSection() {
         data=new ArrayList<>();
+        loadingBar=new ProgressDialog(this);
+        loadingBar.create();
+        loadingBar.setCanceledOnTouchOutside(false);
+        loadingBar.setTitle("Loading...!!!");
+        loadingBar.setMessage("Loading Data Please Wait...!!!");
+        loadingBar.show();
         databaseReference= FirebaseDatabase.getInstance().getReference("results");
         databaseReference.keepSynced(true);
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -72,10 +104,12 @@ public class ResultActivity extends AppCompatActivity {
                 }
                 recyclerAdapter = new recycler_adapter(data,ResultActivity.this);
                 recyclerView.setAdapter(recyclerAdapter);
+                loadingBar.dismiss();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(ResultActivity.this, "Error Loading Data From Database", Toast.LENGTH_SHORT).show();
+                loadingBar.dismiss();
+                Toast.makeText(ResultActivity.this, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

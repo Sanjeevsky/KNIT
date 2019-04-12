@@ -1,6 +1,9 @@
 package com.example.sanjeevyadav.knit;
 
+import android.app.ProgressDialog;
 import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -32,6 +35,7 @@ public class NewsFragment extends Fragment {
     List<DataHold> data;
     DatabaseReference databaseReference;
     Context context;
+    private ProgressDialog loadingBar;
     SwipeRefreshLayout swipeRefreshLayout;
 
         public NewsFragment() {
@@ -41,6 +45,8 @@ public class NewsFragment extends Fragment {
         @Override
         public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
             view=inflater.inflate(R.layout.fragment_news,container,false);
+            databaseReference=FirebaseDatabase.getInstance().getReference("newsfeeds");
+            databaseReference.keepSynced(true);
             context=getContext();
             return view;
         }
@@ -52,20 +58,44 @@ public class NewsFragment extends Fragment {
         recyclerView=view.findViewById(R.id.recyclerview_id);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        RefreshSection();
+        ConnectivityManager cm = (ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+        boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+        if(isConnected) {
+            RefreshSection();
+        }
+        else
+        {
+            Toast.makeText(context,"Your Device is not connected to Internet",Toast.LENGTH_LONG).show();
+        }
         swipeRefreshLayout=view.findViewById(R.id.refreshh_layout_id_newsfeeds);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
 
-                RefreshSection();
-                swipeRefreshLayout.setRefreshing(false);
+                ConnectivityManager cm = (ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
+                NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
+                boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+                if(isConnected) {
+                    RefreshSection();
+                    swipeRefreshLayout.setRefreshing(false);
+                }
+                else
+                {
+                    Toast.makeText(context,"Your Device is not connected to Internet",Toast.LENGTH_LONG).show();
+                }
             }
         });
     }
 
     private void RefreshSection() {
         data=new ArrayList<>();
+        loadingBar=new ProgressDialog(context);
+        loadingBar.create();
+        loadingBar.setCanceledOnTouchOutside(false);
+        loadingBar.setTitle("Loading...!!!");
+        loadingBar.setMessage("Loading Data Please Wait...!!!");
+        loadingBar.show();
         databaseReference=FirebaseDatabase.getInstance().getReference("newsfeeds");
         databaseReference.keepSynced(true);
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -82,10 +112,12 @@ public class NewsFragment extends Fragment {
                 }
                 recyclerAdapter = new recycler_adapter(data,context);
                 recyclerView.setAdapter(recyclerAdapter);
+                loadingBar.dismiss();
             }
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(context, "Error Loading Data From Database", Toast.LENGTH_SHORT).show();
+                loadingBar.dismiss();
+                Toast.makeText(context, databaseError.getMessage(), Toast.LENGTH_SHORT).show();
             }
         });
     }

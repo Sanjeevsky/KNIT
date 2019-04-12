@@ -19,6 +19,7 @@ public class webview_acticity extends AppCompatActivity {
 
     private WebView webView;
     private ProgressBar progressBar;
+    private String titleSet;
     private Toolbar toolbar;
 
     @Override
@@ -40,29 +41,6 @@ public class webview_acticity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressbar_id);
         progressBar.setMax(100);
         Bundle bundle=getIntent().getExtras();
-        if(bundle.getString("url")!=null)
-        {
-            String url=bundle.getString("url");
-            webView.loadUrl(url);
-        }
-        else{
-            final String pdf=bundle.getString("pdf");
-            webView.loadUrl(pdf);
-            webView.setDownloadListener(new DownloadListener() {
-                @Override
-                public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
-                    DownloadManager.Request myrequest = new DownloadManager.Request(Uri.parse(url));
-                    myrequest.allowScanningByMediaScanner();
-                    myrequest.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
-                    myrequest.setDestinationInExternalFilesDir(webview_acticity.this,
-                    Environment.DIRECTORY_DOWNLOADS,".pdf");
-                    DownloadManager mymanager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
-                    mymanager.enqueue(myrequest);
-                    Toast.makeText(webview_acticity.this,"Your File Is Downloading",Toast.LENGTH_LONG).show();
-                }
-            });
-            finish();
-        }
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
@@ -86,12 +64,36 @@ public class webview_acticity extends AppCompatActivity {
             public void onReceivedTitle(WebView view, String title) {
                 super.onReceivedTitle(view, title);
                 getSupportActionBar().setTitle(title);
+                titleSet=title;
             }
             @Override
             public void onReceivedIcon(WebView view, Bitmap icon) {
                 super.onReceivedIcon(view, icon);
             }
         });
+        if(bundle.getString("url")!=null)
+        {
+            String url=bundle.getString("url");
+            webView.loadUrl(url);
+        }
+        else{
+            final String pdf=bundle.getString("pdf");
+            webView.loadUrl(pdf);
+            webView.setDownloadListener(new DownloadListener() {
+                @Override
+                public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
+                    DownloadManager.Request myrequest = new DownloadManager.Request(Uri.parse(url));
+                    myrequest.allowScanningByMediaScanner();
+                    myrequest.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
+                    myrequest.setDestinationInExternalFilesDir(webview_acticity.this,
+                            Environment.DIRECTORY_DOWNLOADS,".pdf").setTitle(titleSet);
+                    DownloadManager mymanager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
+                    mymanager.enqueue(myrequest);
+                    Toast.makeText(webview_acticity.this,"Your File Is Downloading",Toast.LENGTH_LONG).show();
+                }
+            });
+            finish();
+        }
     }
     @Override
     public void onBackPressed() {
