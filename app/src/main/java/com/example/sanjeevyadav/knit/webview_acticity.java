@@ -36,9 +36,8 @@ public class webview_acticity extends AppCompatActivity {
 
     private WebView webView;
     private ProgressBar progressBar;
-    private String titleSet,urlopen;
+    private String filename;
     private Toolbar toolbar;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,7 +57,7 @@ public class webview_acticity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressbar_id);
         progressBar.setMax(100);
         Bundle bundle=getIntent().getExtras();
-        urlopen = bundle.getString("pdf");
+
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
@@ -82,7 +81,6 @@ public class webview_acticity extends AppCompatActivity {
             public void onReceivedTitle(WebView view, String title) {
                 super.onReceivedTitle(view, title);
                 getSupportActionBar().setTitle(title);
-                titleSet=title;
             }
             @Override
             public void onReceivedIcon(WebView view, Bitmap icon) {
@@ -96,22 +94,22 @@ public class webview_acticity extends AppCompatActivity {
         }
         else{
             final String url=bundle.getString("pdf");
-            //webView.loadUrl(url);
-            //Toast.makeText(webview_acticity.this,url,Toast.LENGTH_LONG).show();
-            /*webView.setDownloadListener(new DownloadListener() {
+            filename = url.substring(url.lastIndexOf('/') + 1, url.length());
+            webView.loadUrl(url);
+            webView.setDownloadListener(new DownloadListener() {
                 @Override
                 public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
                     DownloadManager.Request myrequest = new DownloadManager.Request(Uri.parse(url));
                     myrequest.allowScanningByMediaScanner();
                     myrequest.setNotificationVisibility(DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED);
                     myrequest.setDestinationInExternalFilesDir(webview_acticity.this,
-                            Environment.DIRECTORY_DOWNLOADS,".pdf").setTitle(titleSet);
+                            Environment.DIRECTORY_DOWNLOADS,".pdf").setTitle(filename);
                     DownloadManager mymanager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
                     mymanager.enqueue(myrequest);
                     //Toast.makeText(webview_acticity.this,"Your File Is Downloading",Toast.LENGTH_LONG).show();
                 }
-            });*/
-            //finish();
+            });
+            finish();
         }
     }
     @Override
