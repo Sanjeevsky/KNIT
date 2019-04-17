@@ -3,6 +3,7 @@ package com.example.sanjeevyadav.knit;
 import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -13,6 +14,7 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -75,7 +77,7 @@ public class NewsFragment extends Fragment {
         recyclerView=view.findViewById(R.id.recyclerview_id);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
-        ConnectivityManager cm = (ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
+        /*ConnectivityManager cm = (ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
         if(isConnected) {
@@ -84,13 +86,14 @@ public class NewsFragment extends Fragment {
         else
         {
             Toast.makeText(context,"Your Device is not connected to Internet",Toast.LENGTH_LONG).show();
-        }
+        }*/
+        RefreshSection();
         swipeRefreshLayout=view.findViewById(R.id.refreshh_layout_id_newsfeeds);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
 
-                ConnectivityManager cm = (ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
+                /*ConnectivityManager cm = (ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
                 NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
                 boolean isConnected = activeNetwork != null && activeNetwork.isConnectedOrConnecting();
                 if(isConnected) {
@@ -100,7 +103,9 @@ public class NewsFragment extends Fragment {
                 else
                 {
                     Toast.makeText(context,"Your Device is not connected to Internet",Toast.LENGTH_LONG).show();
-                }
+                }*/
+                RefreshSection();
+                swipeRefreshLayout.setRefreshing(false);
             }
         });
     }
@@ -112,7 +117,6 @@ public class NewsFragment extends Fragment {
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.setTitle("Loading...!!!");
         loadingBar.setMessage("Loading Data Please Wait...!!!");
-        loadingBar.show();
         databaseReference=FirebaseDatabase.getInstance().getReference("newsfeeds");
         databaseReference.keepSynced(true);
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -121,6 +125,7 @@ public class NewsFragment extends Fragment {
 
                 if(dataSnapshot.exists())
                 {
+                    loadingBar.show();
                     for(DataSnapshot dataSnap : dataSnapshot.getChildren())
                     {
                         DataHold donorData = dataSnap.getValue(DataHold.class);
@@ -139,7 +144,7 @@ public class NewsFragment extends Fragment {
         });
     }
 
-    @Override
+    /*@Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, NewsFragment.this);
@@ -157,21 +162,21 @@ public class NewsFragment extends Fragment {
     }*/
 
 
-    void downloadPdf(String url,Context context)
+    /*void downloadPdf(String url,Context context)
     {
 
         new DownloadFile(context).execute(url);
-        /*if (EasyPermissions.hasPermissions(context, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
+        /*if (EasyPermissions.hasPermissions(, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
             //Get the URL entered
-            new DownloadFile(context).execute(url);
+           new DownloadFile(context).execute(url);
 
         } else {
             //If permission is not present request for the same.
             EasyPermissions.requestPermissions(context, getString(R.string.write_file), WRITE_REQUEST_CODE, Manifest.permission.READ_EXTERNAL_STORAGE);
-        }*/
+        }
     }
 
-    private class DownloadFile extends AsyncTask<String, String, String> {
+    /*private class DownloadFile extends AsyncTask<String, String, String> {
 
         private ProgressDialog progressDialog;
         private String fileName;
@@ -184,7 +189,7 @@ public class NewsFragment extends Fragment {
          * Show Progress Bar Dialog
          */
 
-        public DownloadFile(Context context){
+        /*public DownloadFile(Context context){
             this.context=context;
         }
         @Override
@@ -192,14 +197,15 @@ public class NewsFragment extends Fragment {
             super.onPreExecute();
             this.progressDialog = new ProgressDialog(context);
             this.progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
-            this.progressDialog.setCancelable(false);
+            this.progressDialog.setTitle("Downloading...");
+            this.progressDialog.setCancelable(true);
             this.progressDialog.show();
         }
 
         /**
          * Downloading file in background thread
          */
-        @Override
+        /*@Override
         protected String doInBackground(String... f_url) {
             int count;
             try {
@@ -252,7 +258,9 @@ public class NewsFragment extends Fragment {
                 // closing streams
                 output.close();
                 input.close();
-                return "Downloaded at: " + folder + fileName;
+                //return "Downloaded at: " + folder + fileName;
+                isDownloaded = true;
+                return fileName;
 
             } catch (Exception e) {
                 Log.e("Error: ", e.getMessage());
@@ -264,7 +272,7 @@ public class NewsFragment extends Fragment {
         /**
          * Updating progress bar
          */
-        protected void onProgressUpdate(String... progress) {
+        /*protected void onProgressUpdate(String... progress) {
             // setting progress percentage
             progressDialog.setProgress(Integer.parseInt(progress[0]));
         }
@@ -275,8 +283,28 @@ public class NewsFragment extends Fragment {
             // dismiss the dialog after the file was downloaded
             this.progressDialog.dismiss();
 
+            if (isDownloaded){
+                final AlertDialog.Builder builder = new AlertDialog.Builder(context);
+                builder.setCancelable(false);
+                builder.setTitle("Download Complete");
+                builder.setMessage(message);
+                builder.setPositiveButton("Open", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                builder.setNegativeButton("Close", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+
+                    }
+                });
+                AlertDialog alertDialog = builder.create();
+                alertDialog.show();
+            }
             // Display File path after downloading
             Toast.makeText(context, message, Toast.LENGTH_LONG).show();
         }
-    }
+    }*/
 }
