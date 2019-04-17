@@ -23,7 +23,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@drawable/background"
-            android:padding="10dp"
+            android:padding="5dp"
             >
 
             <LinearLayout

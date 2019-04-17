@@ -37,7 +37,7 @@
                         android:paddingRight="3dp"
                         android:layout_marginRight="3dp">
                         <TextView
-                            android:text="Phones/Mobiles"
+                            android:text=" Phones/Mobiles"
                             android:textColor="#5F0D0D"
                             android:textStyle="bold" />
                     </TableRow>
@@ -45,7 +45,7 @@
                         android:padding="1dp"
                         android:background="#F0EDED">
                         <TextView
-                            android:text="City-STD Code : 05362"
+                            android:text=" City-STD Code : 05362"
                             android:textColor="#3A3535"
                             android:textStyle="bold" />
                     </TableRow>
@@ -56,7 +56,8 @@
                     android:layout_height="match_parent"
                     android:stretchColumns="*"
                     android:orientation="vertical"
-                    android:padding="5dip"
+                    android:padding="1dip"
+                    android:background="@drawable/tablelayout"
                     android:divider="?android:attr/dividerHorizontal"
                     android:showDividers="middle">
                     <TableRow
@@ -68,6 +69,7 @@
                             android:text="Designation"
                             android:textColor="#131212"
                             android:paddingRight="7dp"
+                            android:paddingLeft="2dp"
                             android:textStyle="bold" />
                         <TextView
                             android:text="Phone No."
@@ -92,7 +94,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Director"/>
+                            android:text="Director"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="240454"
                             android:paddingLeft="4dp"/>
@@ -109,7 +112,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Registrar"/>
+                            android:text="Registrar"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="241238"
                             android:paddingLeft="4dp"/>
@@ -126,7 +130,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Finance and Accounts Officer"/>
+                            android:text="Finance and Accounts Officer"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="242046"
                             android:paddingLeft="4dp"/>
@@ -143,7 +148,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Dean of Academic Affair"/>
+                            android:text="Dean of Academic Affair"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="240674"
                             android:paddingLeft="4dp"/>
@@ -160,7 +166,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Dean of Student Welfare"/>
+                            android:text="Dean of Student Welfare"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="232281\n241257(Res.)"
                             android:paddingLeft="4dp"/>
@@ -177,7 +184,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Dean R and D"/>
+                            android:text="Dean R and D"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="" />
                         <TextView
@@ -193,7 +201,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Chairman CSA"/>
+                            android:text="Chairman CSA"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="" />
                         <TextView
@@ -209,7 +218,8 @@
                     android:divider="?android:attr/dividerVertical"
                     android:showDividers="middle">
                         <TextView
-                            android:text="In-Charge Security"/>
+                            android:text="In-Charge Security"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="240669"
                             android:paddingLeft="4dp"/>
@@ -226,7 +236,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="pro. In-Charge,T and P"/>
+                            android:text="pro. In-Charge,T and P"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="" />
                         <TextView
@@ -242,7 +253,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Prof.In-Charge,Library"/>
+                            android:text="Prof.In-Charge,Library"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="" />
                         <TextView
@@ -258,7 +270,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Medical Officer"/>
+                            android:text="Medical Officer"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="" />
                         <TextView
@@ -274,7 +287,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Head of Applied Sc. and Humanities"/>
+                            android:text="Head of Applied Sc. and Humanities"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="242175"
                             android:paddingLeft="4dp"/>
@@ -291,7 +305,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Head of Civil Engg. Dept."/>
+                            android:text="Head of Civil Engg. Dept."
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="240669"
                             android:paddingLeft="4dp"/>
@@ -308,7 +323,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Head of Comp. Sc.and Engg. Dept"/>
+                            android:text="Head of Comp. Sc.and Engg. Dept"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="240675"
                             android:paddingLeft="4dp"/>
@@ -325,7 +341,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Head of Electrical Engg. Dept"/>
+                            android:text="Head of Electrical Engg. Dept"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="240674"
                             android:paddingLeft="4dp"/>
@@ -342,7 +359,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Head of Mechanical Engg. Dept"/>
+                            android:text="Head of Mechanical Engg. Dept"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="242047"
                             android:paddingLeft="4dp"/>
@@ -359,7 +377,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Head of Electronics Engg. Dept"/>
+                            android:text="Head of Electronics Engg. Dept"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="225254"
                             android:paddingLeft="4dp"/>
@@ -376,7 +395,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Chief Warden(Boys Hostel)"/>
+                            android:text="Chief Warden(Boys Hostel)"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -393,7 +413,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Chief Warden(Girls Hostel)"/>
+                            android:text="Chief Warden(Girls Hostel)"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -410,7 +431,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Wardeb Aryabhatta"/>
+                            android:text="Warden Aryabhatta"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -427,7 +449,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Warden Gargi Hostel"/>
+                            android:text="Warden Gargi Hostel"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -444,7 +467,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Warden Maitreyee Hostel"/>
+                            android:text="Warden Maitreyee Hostel"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -461,7 +485,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Warden Khosla Hostel"/>
+                            android:text="Warden Khosla Hostel"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -478,7 +503,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Warden VS Hostel"/>
+                            android:text="Warden VS Hostel"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -495,7 +521,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Warden New Hostel"/>
+                            android:text="Warden New Hostel"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -512,7 +539,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Warden M.N. Shah Hostel"/>
+                            android:text="Warden M.N. Shah Hostel"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -529,7 +557,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Warden Vikarm Sarabhau Hostel"/>
+                            android:text="Warden Vikarm Sarabhau Hostel"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -546,7 +575,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Warden Raman Hostel"/>
+                            android:text="Warden Raman Hostel"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -563,7 +593,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Warden Kalam Hostel"/>
+                            android:text="Warden Kalam Hostel"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text=""
                             android:paddingLeft="4dp"/>
@@ -580,7 +611,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Gargi Girls Hostel"/>
+                            android:text="Gargi Girls Hostel"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="224693"
                             android:paddingLeft="4dp"/>
@@ -597,7 +629,8 @@
                         android:divider="?android:attr/dividerVertical"
                         android:showDividers="middle">
                         <TextView
-                            android:text="Security Office(Main Gate)"/>
+                            android:text="Security Office(Main Gate)"
+                            android:paddingLeft="2dp"/>
                         <TextView
                             android:text="225291"
                             android:paddingLeft="4dp"/>

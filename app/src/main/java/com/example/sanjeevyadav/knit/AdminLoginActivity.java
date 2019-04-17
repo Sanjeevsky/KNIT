@@ -42,6 +42,7 @@ public class AdminLoginActivity extends AppCompatActivity {
 
                 if (!TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)) {
                     loadingBar.create();
+                    loadingBar.setCanceledOnTouchOutside(false);
                     loadingBar.setTitle("Logging In");
                     loadingBar.setMessage("Please Wait");
                     loadingBar.show();

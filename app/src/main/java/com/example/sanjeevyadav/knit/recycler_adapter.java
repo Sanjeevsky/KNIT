@@ -26,6 +26,7 @@ public class recycler_adapter extends RecyclerView.Adapter<viewHolder> {
         View view = LayoutInflater.from(context).inflate(R.layout.recycler_item_layout,viewGroup, false);
         viewHolder userviewHolder = new viewHolder(view);
         return userviewHolder;
+
     }
 
     @Override
@@ -39,12 +40,13 @@ public class recycler_adapter extends RecyclerView.Adapter<viewHolder> {
                 Intent intent=new Intent(context,webview_acticity.class);
                 if(dataHold.type.equals("pdf"))
                 {
-                    intent.putExtra("pdf",""+dataHold.link);
+                    //intent.putExtra("pdf",""+dataHold.link);
+                    new NewsFragment().downloadPdf(dataHold.link,context);
                 }
                 else {
                     intent.putExtra("url",""+dataHold.link);
+                    context.startActivity(intent);
                 }
-                context.startActivity(intent);
             }
         });
     }
