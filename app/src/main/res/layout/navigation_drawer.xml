@@ -17,11 +17,11 @@
        app:itemTextAppearance="@style/Base.TextAppearance.AppCompat.Body2"
        android:id="@+id/navigation_view"
        app:itemIconTint="@drawable/drawer_item_color"
+       android:background="@drawable/background"
        android:layout_gravity="start"
        android:fitsSystemWindows="true"
        app:headerLayout="@layout/navigation_header"
        app:menu="@menu/navigation_menu"
-       android:background="#D32F2F"
        android:textAlignment="inherit" />
 
 </android.support.v4.widget.DrawerLayout>
