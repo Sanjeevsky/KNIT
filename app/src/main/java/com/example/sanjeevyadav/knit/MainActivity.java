@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.os.Handler;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
@@ -30,6 +31,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     ViewPager viewPager;
     NavigationView navigationView;
     DrawerLayout drawerLayout;
+    private boolean doubleBackToExitPressedOnce = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,52 +41,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
 
-        //Runs Only for First Time after Installation.
-        Boolean isFirstRun = getSharedPreferences("PREFERENCE", MODE_PRIVATE)
-                .getBoolean("isFirstRun", true);
-        final String[] topic = {""};
 
-        if (isFirstRun) {
-             int check = 0;
-            //show start activity
-            // setup the alert builder
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setCancelable(false);
-            builder.setTitle("Continue As");
-
-// add a list
-            String[] credentials = {"Faculty", "Student"};
-            builder.setItems(credentials, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    switch (which) {
-                        case 0:
-                            topic[0] +="Faculty";
-                            break;
-                        case 1:
-                            topic[0] +="Student";
-                            break;
-
-                    }
-                    runSecondDialog(topic);
-                }
-            });
-
-// create and show the alert dialog
-            AlertDialog dialog = builder.create();
-            dialog.show();
-        }
-
-
-
-        FirebaseInstanceId.getInstance().getInstanceId().addOnSuccessListener(new OnSuccessListener<InstanceIdResult>() {
-            @Override
-            public void onSuccess(InstanceIdResult instanceIdResult) {
-                String token = instanceIdResult.getToken();
-                // send it to server
-                //Toast.makeText(MainActivity.this,"Token "+token,Toast.LENGTH_LONG).show();
-            }
-        });
         viewPager=(ViewPager)findViewById(R.id.viewPager_id);
         ViewPagerAdapter adapter=new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new MainFragment(),"Main");
@@ -101,84 +58,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toggle.syncState();
     }
 
-    private void runSecondDialog(final String[] topic) {
-
-            AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-            builder.setCancelable(false);
-            builder.setTitle("Choose Your Department");
-
-// add a list
-            String[] animal = {"Civil", "Computer Science", "Electrical", "Electronic", "Mechanical","Information Technology","MCA"};
-            builder.setItems(animal, new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    switch (which) {
-                        case 0:
-                            topic[0]+="_Civil";
-                            break;
-                        case 1:
-                            topic[0]+="_Computer_Science";
-                            break;
-                        case 2:
-                            topic[0]+="_Electrical";
-                            break;
-                        case 3:
-                            topic[0]+="_Electronic";
-                            break;
-                        case 4:
-                            topic[0]+="_Mechanical";
-                            break;
-                        case 5:
-                            topic[0]+="_Information_Technology";
-                            break;
-                        case 6:
-                            topic[0]+="_MCA";
-                            break;
-                    }
-
-                    saveTopic(topic);
-                }
-            });
-
-// create and show the alert dialog
-            AlertDialog dialog = builder.create();
-            dialog.show();
-
-
-    }
-
-    private void saveTopic(final String[] topic) {
-        Toast.makeText(MainActivity.this,topic[0],Toast.LENGTH_LONG).show();
-        FirebaseInstanceId.getInstance().getInstanceId()
-                .addOnCompleteListener(new OnCompleteListener<InstanceIdResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<InstanceIdResult> task) {
-                        if (!task.isSuccessful()) {
-                            // Log.w(TAG, "getInstanceId failed", task.getException());
-                            return;
-                        }
-
-                        // Get new Instance ID token
-                        String token = task.getResult().getToken();
-                        Toast.makeText(MainActivity.this, "Instance Created", Toast.LENGTH_SHORT).show();
-
-                    }
-                });
-
-        FirebaseMessaging.getInstance().subscribeToTopic(topic[0])
-                .addOnCompleteListener(new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        String msg = "Successfully Subscribe to"+topic[0];
-                        if (!task.isSuccessful()) {
-                            msg = "Failed To Subscribe Branch";
-                        }
-                        Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
-                    }
-                });
-        getSharedPreferences("PREFERENCE", MODE_PRIVATE).edit()
-                .putBoolean("isFirstRun", false).apply();
-    }
 
 
     @Override
@@ -186,8 +65,22 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         if(drawerLayout.isDrawerOpen(GravityCompat.START))
         {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }else{
-            super.onBackPressed();
+        }
+            else {
+            new Handler().postDelayed(new Runnable() {
+
+                @Override
+                public void run() {
+                    doubleBackToExitPressedOnce = true;
+                }
+            }, 2000);
+                if (doubleBackToExitPressedOnce) {
+                    this.doubleBackToExitPressedOnce = false;
+                    Toast.makeText(this,"Please click BACK again to exit.", Toast.LENGTH_SHORT).show();
+                } else {
+                    finish();
+                }
+
         }
 
     }
