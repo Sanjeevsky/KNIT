@@ -65,15 +65,13 @@ public class DepartmentsActivity extends AppCompatActivity {
                 "subjects like Mathematics, Physics, Chemistry and Professional communications. The department\n" +
                 "has competent and knowledgeable faculty and well equipped laboratories.<br><br>\n" +
                 "<h3><font color =\"#5F0D0D\">Laboratories</h3>\n" +
-                "\n" +
-                "\n" +
-                "<ul class=\"UL1\">\n" +
-                "<li>Chemistry Lab</li>\n" +
-                "<li>Laser Lab</li>\n" +
-                "<li>Physics Lab</li>\n" +
-                "<li>Departmental Computer Centre</li>\n" +
-                "<li>Professional Communications Lab</li>\n" +
-                "</ul>\n" +
+                "<ul class=\"UL1\">" +
+                "<li>Chemistry Lab</li><br>" +
+                "<li>Laser Lab</li><br>" +
+                "<li>Physics Lab</li><br>" +
+                "<li>Departmental Computer Centre</li><br>" +
+                "<li>Professional Communications Lab</li><br>" +
+                "</ul>" +
                 "</p>"));
         applied_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,22 +117,19 @@ public class DepartmentsActivity extends AppCompatActivity {
                 "equipments\n" +
                 "through World Bank assisted TEQIP programme.<br><br>\n" +
                 "<h3><font color=\"#5F0D0D\">Laboratories</h3>\n" +
-                "\n" +
-                "\n" +
                 "<ul class=\"UL1\">\n" +
-                "<li>Environmental Engineering Laboratory</li>\n" +
-                "<li>Hydraulics Laboratory</li>\n" +
-                "<li>Geotechnical Engineering Laboratory</li>\n" +
-                "<li>Geology Laboratory</li>\n" +
-                "<li>Transportation Laboratory</li>\n" +
-                "<li>Rock Mechanics Laboratory</li>\n" +
-                "<li>Structures Laboratory</li>\n" +
-                "<li>Departmental Computer centre</li>\n" +
-                "<li>Survey Laboratory</li>\n" +
-                "<li>Graphics laboratory</li>\n" +
-                "<li>Concrete Laboratory</li>\n" +
-                "\n" +
-                "</ul>\n"));
+                "<li>Environmental Engineering Laboratory</li><br>" +
+                "<li>Hydraulics Laboratory</li><br>" +
+                "<li>Geotechnical Engineering Laboratory</li><br>" +
+                "<li>Geology Laboratory</li><br>" +
+                "<li>Transportation Laboratory</li><br>" +
+                "<li>Rock Mechanics Laboratory</li><br>" +
+                "<li>Structures Laboratory</li><br>" +
+                "<li>Departmental Computer centre</li><br>" +
+                "<li>Survey Laboratory</li><br>" +
+                "<li>Graphics laboratory</li><br>" +
+                "<li>Concrete Laboratory</li><br>" +
+                "</ul>"));
         civil_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -185,16 +180,16 @@ public class DepartmentsActivity extends AppCompatActivity {
                 "<h3><font color=\"#5F0D0D\">Laboratories</h3>\n" +
                 "\n" +
                 "<ul class=\"UL1\">\n" +
-                "<li>Electrical Science Lab.</li>\n" +
-                "<li>Electrical Machines lab</li>\n" +
-                "<li>Electrical Measurement Lab</li>\n" +
-                "<li>Electrical Instrumentation Lab</li>\n" +
-                "<li>Control Systems lab</li>\n" +
-                "<li>Microprocessors Lab</li>\n" +
-                "<li>PC & Simulation Lab</li>\n" +
-                "<li>Power Electronics Lab</li>\n" +
-                "<li>Power Systems lab</li>\n" +
-                "<li>High Voltage Eng. lab</li>\n" +
+                "<li>Electrical Science Lab.</li><br>" +
+                "<li>Electrical Machines lab</li><br>" +
+                "<li>Electrical Measurement Lab</li><br>" +
+                "<li>Electrical Instrumentation Lab</li><br>" +
+                "<li>Control Systems lab</li><br>" +
+                "<li>Microprocessors Lab</li><br>" +
+                "<li>PC & Simulation Lab</li><br>" +
+                "<li>Power Electronics Lab</li><br>" +
+                "<li>Power Systems lab</li><br>" +
+                "<li>High Voltage Eng. lab</li><br>" +
                 "</ul>\n"));
         electrical_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -245,19 +240,19 @@ public class DepartmentsActivity extends AppCompatActivity {
                 "<h3><font color=\"#5F0D0D\">Laboratories</h3>\n" +
                 "\n" +
                 "</ul><ul class=\"UL1\">\n" +
-                "<li>Semiconductor Devices lab</li>\n" +
-                "<li>Digital Electronics Lab</li>\n" +
-                "<li>Digital Signal Processing Lab</li>\n" +
-                "<li>Computer Simulation Lab</li>\n" +
-                "<li>Digital Signal & Speech Processing Lab</li>\n" +
-                "<li>Digital & Optical Communications Lab</li>\n" +
-                "<li>Analog Communications Lab</li>\n" +
-                "<li>T.V. & Satellite Communications Lab</li>\n" +
-                "<li>Biomedical Electronics Lab</li>\n" +
-                "<li>Microwave & Radar Lab </li>\n" +
-                "<li>Electronic Measurement &\n" +
-                "Instrumentation Lab </li>\n" +
-                "<li>Electronic Workshop & PCB Lab </li>\n" +
+                "<li>Semiconductor Devices lab</li><br>" +
+                "<li>Digital Electronics Lab</li><br>" +
+                "<li>Digital Signal Processing Lab</li><br>" +
+                "<li>Computer Simulation Lab</li><br>" +
+                "<li>Digital Signal & Speech Processing Lab</li><br>" +
+                "<li>Digital & Optical Communications Lab</li><br>" +
+                "<li>Analog Communications Lab</li><br>" +
+                "<li>T.V. & Satellite Communications Lab</li><br>" +
+                "<li>Biomedical Electronics Lab</li><br>" +
+                "<li>Microwave & Radar Lab </li><br>" +
+                "<li>Electronic Measurement &<br>" +
+                "Instrumentation Lab </li><br>" +
+                "<li>Electronic Workshop & PCB Lab </li><br>" +
                 "</ul>\n"));
         electronics_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -308,21 +303,21 @@ public class DepartmentsActivity extends AppCompatActivity {
                 "<h3><font color=\"#5F0D0D\">Laboratories</h3>\n" +
                 "\n" +
                 "<ul class=\"UL1\">\n" +
-                "<li>Refrigeration & Air Conditioning Lab</li>\n" +
-                "<li>Heat & Mass Transfer Lab</li>\n" +
-                "<li>I.C. Engines & Automotive Vehicles Lab</li>\n" +
-                "<li>Steam power Lab</li>\n" +
-                "<li>Fluid Machinery Lab</li>\n" +
-                "<li>Wind Energy Lab</li>\n" +
-                "<li>KOM & Vibration Lab</li>\n" +
-                "<li>CAM & FMS Lab</li>\n" +
-                "<li>Engineering Mechanics & M.O.S. Lab</li>\n" +
-                "<li>Tribology Lab</li>\n" +
-                "<li>Material Sciences Lab</li>\n" +
-                "<li>Production Engineering Lab</li>\n" +
-                "<li>Metrology and Measurement lab</li>\n" +
-                "<li>CAD Lab</li>\n" +
-                "<li>Bio Gas Lab</li>\n" +
+                "<li>Refrigeration & Air Conditioning Lab</li><br>" +
+                "<li>Heat & Mass Transfer Lab</li><br>" +
+                "<li>I.C. Engines & Automotive Vehicles Lab</li><br>" +
+                "<li>Steam power Lab</li><br>" +
+                "<li>Fluid Machinery Lab</li><br>" +
+                "<li>Wind Energy Lab</li><br>" +
+                "<li>KOM & Vibration Lab</li><br>" +
+                "<li>CAM & FMS Lab</li><br>" +
+                "<li>Engineering Mechanics & M.O.S. Lab</li><br>" +
+                "<li>Tribology Lab</li><br>" +
+                "<li>Material Sciences Lab</li><br>" +
+                "<li>Production Engineering Lab</li><br>" +
+                "<li>Metrology and Measurement lab</li><br>" +
+                "<li>CAD Lab</li><br>" +
+                "<li>Bio Gas Lab</li><br>" +
                 "</ul>\n"));
         mechanical_button.setOnClickListener(new View.OnClickListener() {
             @Override

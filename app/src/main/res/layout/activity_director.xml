@@ -32,7 +32,7 @@
                 app:cardBackgroundColor="#00ff001C"
                 app:cardCornerRadius="4dp"
                 app:cardMaxElevation="4dp"
-                app:contentPadding="10dp">
+                app:contentPadding="5dp">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -66,12 +66,10 @@
                             android:layout_gravity="center"
                             android:elevation="8dp"
                             android:foregroundGravity="center_vertical"
-                            android:gravity="center"
-                            android:layout_margin="5dp"
+                            android:layout_margin="2dp"
                             android:textColor="#D3CECE"
                             android:paddingTop="5dp"
-                            android:text="Kamla Nehru Institute of Technology, Sultanpur has marked its presence as one of the leading technical institutes for providing congenial environment for the holistic growth of the students for the last four decades by and large. Strength and standing of the institute is witnessed by the professionally competent alumni proving their worth in academia and industry all over the country and overseas. In order to contribute to the socio-economic growth of the region in and around Sultanpur district, the institute renders testing and consultancy services to neighbouring industries, and of course to government and other agencies.\n\n The institute looks forward to becoming as one of the most preferred destination for young students aspiring to emerge as successful engineers, technologists and good human beings. We need to work even harder to maintain excellence in teaching and research and to achieve pioneer position in the area of technical education. I strongly believe that the key to success of an institute is the dedicated efforts of its each and every individual. I am sure and confident that with the help, support and commitment of our highly qualified and experienced faculty members, supportive administration, dedicated staff members, and highly motivated and enthusiastic students, we shall be able to carve the niche in pursuit of our vision and add to the professional development of the state and country."
-                            android:textAlignment="gravity"
+                            android:text="Kamla Nehru Institute of Technology, Sultanpur has marked its presence as one of the leading technical institutes for providing congenial environment for the holistic growth of the students for the last four decades by and large. Strength and standing of the institute is witnessed by the professionally competent alumni proving their worth in academia and industry all over the country and overseas. In order to contribute to the socio-economic growth of the region in and around Sultanpur district, the institute renders testing and consultancy services to neighbouring industries, and of course to government and other agencies.\n\nThe institute looks forward to becoming as one of the most preferred destination for young students aspiring to emerge as successful engineers, technologists and good human beings. We need to work even harder to maintain excellence in teaching and research and to achieve pioneer position in the area of technical education. I strongly believe that the key to success of an institute is the dedicated efforts of its each and every individual. I am sure and confident that with the help, support and commitment of our highly qualified and experienced faculty members, supportive administration, dedicated staff members, and highly motivated and enthusiastic students, we shall be able to carve the niche in pursuit of our vision and add to the professional development of the state and country."
                             android:textSize="16sp"
                             android:textStyle="bold"
                             tools:fontFamily="sans-serif-condensed" />

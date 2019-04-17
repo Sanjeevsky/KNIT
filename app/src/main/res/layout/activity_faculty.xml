@@ -24,14 +24,13 @@
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_margin="15dp">
+                android:layout_margin="10dp">
 
                 <Button
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:id="@+id/faculty_applied_button_id"
                     android:background="@drawable/round_corner_button"
-                    android:layout_marginTop="5dp"
                     android:drawableLeft="@drawable/dropdown"
                     android:padding="10dp"
                     android:elevation="10dp"
@@ -41,6 +40,9 @@
                 <com.github.aakira.expandablelayout.ExpandableRelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:layout_marginTop="4dp"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
                     android:id="@+id/expandablelayout1_faculty"
                     android:background="@drawable/expandable_border"
                     app:ael_duration="400"
@@ -48,7 +50,7 @@
                     app:ael_expanded="false"
                     app:ael_interpolator="accelerate"
                     app:ael_orientation="vertical"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="3dp">
 
                     <ScrollView
                         android:layout_width="match_parent"
@@ -57,16 +59,18 @@
                         <android.support.v7.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:elevation="20dp"
+                            android:elevation="2dp"
                             app:cardCornerRadius="5dp"
-                            android:layout_marginTop="10dp">
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="2dp">
 
                             <TableLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
                                 android:stretchColumns="*"
-                                android:padding="5dip"
+                                android:padding="1dip"
+                                android:background="@drawable/tablelayout"
                                 android:showDividers="middle"
                                 android:divider="?android:attr/dividerHorizontal">
 
@@ -75,7 +79,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="A.K. Singh,Ph.D."/>
+                                        android:text="A.K. Singh,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor,Chemistry"
                                         android:paddingLeft="5dp"/>
@@ -85,7 +90,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="L.U.B. Pandey,Ph.D."/>
+                                        android:text="L.U.B. Pandey,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor,English and Head"
                                         android:paddingLeft="5dp"/>
@@ -95,7 +101,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="C.L. Yadav,Ph.D."/>
+                                        android:text="C.L. Yadav,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor,Chemistry"
                                         android:paddingLeft="5dp"/>
@@ -105,7 +112,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="R.P. Tripathi,Ph.D."/>
+                                        android:text="R.P. Tripathi,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor,Maths"
                                         android:paddingLeft="5dp"/>
@@ -115,7 +123,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="H.K. Mishra,Ph.D."/>
+                                        android:text="H.K. Mishra,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Associate Professor,Maths"
                                         android:paddingLeft="5dp"/>
@@ -125,7 +134,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Pradeep Kumar,MBA,M.Phil"/>
+                                        android:text="Pradeep Kumar,MBA,M.Phil"
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor,Management"
                                         android:paddingLeft="5dp"/>
@@ -135,7 +145,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Akhilesh Kumar Singh,Ph.D."/>
+                                        android:text="Akhilesh Kumar Singh,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor,Maths"
                                         android:paddingLeft="5dp"/>
@@ -145,7 +156,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Kapil Saxena,Ph.D."/>
+                                        android:text="Kapil Saxena,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor,Physics"
                                         android:paddingLeft="5dp"/>
@@ -177,11 +189,14 @@
                     android:id="@+id/expandablelayout2_faculty"
                     android:background="@drawable/expandable_border"
                     app:ael_duration="400"
+                    android:layout_marginTop="4dp"
+                    android:paddingRight="2dp"
+                    android:paddingLeft="2dp"
                     android:layout_below="@+id/faculty_civil_button_id"
                     app:ael_expanded="false"
                     app:ael_interpolator="accelerate"
                     app:ael_orientation="vertical"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="3dp">
 
                     <ScrollView
                         android:layout_width="match_parent"
@@ -190,16 +205,18 @@
                         <android.support.v7.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:elevation="20dp"
+                            android:elevation="5dp"
                             app:cardCornerRadius="5dp"
-                            android:layout_marginTop="10dp">
+                            android:layout_marginBottom="3dp"
+                            android:layout_marginTop="2dp">
 
                             <TableLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
+                                android:background="@drawable/tablelayout"
                                 android:stretchColumns="*"
-                                android:padding="5dip"
+                                android:padding="1dip"
                                 android:showDividers="middle"
                                 android:divider="?android:attr/dividerHorizontal">
 
@@ -208,7 +225,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="N.K. Saxena,Ph.D."/>
+                                        android:text="N.K. Saxena,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor"
                                         android:paddingLeft="5dp"/>
@@ -218,7 +236,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="M.K. Gupta,Ph.D."/>
+                                        android:text="M.K. Gupta,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor"
                                         android:paddingLeft="5dp"/>
@@ -228,7 +247,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="B.N. Rai,Ph.D."/>
+                                        android:text="B.N. Rai,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor(On Leave)"
                                         android:paddingLeft="5dp"/>
@@ -238,7 +258,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="U.K. Maheshwari,Ph.D."/>
+                                        android:text="U.K. Maheshwari,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor and Head"
                                         android:paddingLeft="5dp"/>
@@ -248,7 +269,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Anupam Verma,Ph.D."/>
+                                        android:text="Anupam Verma,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -258,7 +280,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Pradeep Kumar,MBA,M.Phil"/>
+                                        android:text="Pradeep Kumar,MBA,M.Phil"
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor,Management"
                                         android:paddingLeft="5dp"/>
@@ -268,7 +291,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Bipin Prajapati,M.Tech"/>
+                                        android:text="Bipin Prajapati,M.Tech"
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -278,7 +302,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="H.K. Gupta,M.Tech."/>
+                                        android:text="H.K. Gupta,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -288,7 +313,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Ruchin Agarwal,M.Tech."/>
+                                        android:text="Ruchin Agarwal,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -320,11 +346,14 @@
                     android:id="@+id/expandablelayout3_faculty"
                     android:background="@drawable/expandable_border"
                     app:ael_duration="400"
+                    android:paddingRight="2dp"
+                    android:paddingLeft="2dp"
+                    android:layout_marginTop="4dp"
                     android:layout_below="@+id/faculty_electrical_button_id"
                     app:ael_expanded="false"
                     app:ael_interpolator="accelerate"
                     app:ael_orientation="vertical"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="3dp">
 
                     <ScrollView
                         android:layout_width="match_parent"
@@ -333,16 +362,18 @@
                         <android.support.v7.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:elevation="20dp"
-                            app:cardCornerRadius="5dp"
-                            android:layout_marginTop="10dp">
+                            android:elevation="5dp"
+                            android:layout_marginBottom="3dp"
+                            app:cardCornerRadius="2dp"
+                            android:layout_marginTop="2dp">
 
                             <TableLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
+                                android:background="@drawable/tablelayout"
                                 android:stretchColumns="*"
-                                android:padding="5dip"
+                                android:padding="1dip"
                                 android:showDividers="middle"
                                 android:divider="?android:attr/dividerHorizontal">
 
@@ -351,7 +382,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="K.S. Verma,Ph.D."/>
+                                        android:text="K.S. Verma,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor"
                                         android:paddingLeft="5dp"/>
@@ -361,7 +393,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="S.K. Sinha,Ph.D."/>
+                                        android:text="S.K. Sinha,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor"
                                         android:paddingLeft="5dp"/>
@@ -371,7 +404,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="J.P. Pandey,Ph.D."/>
+                                        android:text="J.P. Pandey,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor and Director KNIT"
                                         android:paddingLeft="5dp"/>
@@ -381,7 +415,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="R.P. Payasi,Ph.D."/>
+                                        android:text="R.P. Payasi,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor"
                                         android:paddingLeft="5dp"/>
@@ -391,7 +426,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="A.S. Pandey,Ph.D."/>
+                                        android:text="A.S. Pandey,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant and Head"
                                         android:paddingLeft="5dp"/>
@@ -401,7 +437,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Deependra Singh,Ph.D."/>
+                                        android:text="Deependra Singh,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor"
                                         android:paddingLeft="5dp"/>
@@ -411,7 +448,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Yogesh Kumar Chauhan,Ph.D."/>
+                                        android:text="Yogesh Kumar Chauhan,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -421,7 +459,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Saurabh Mani Tripathi,Ph.D."/>
+                                        android:text="Saurabh Mani Tripathi,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -431,7 +470,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Bindeshwar Singh,Ph.D."/>
+                                        android:text="Bindeshwar Singh,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -441,7 +481,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Varun Kumar,M.Tech."/>
+                                        android:text="Varun Kumar,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -473,11 +514,15 @@
                     android:id="@+id/expandablelayout4_faculty"
                     android:background="@drawable/expandable_border"
                     app:ael_duration="400"
+                    android:layout_marginTop="4dp"
                     android:layout_below="@+id/faculty_electronics_button_id"
                     app:ael_expanded="false"
+                    android:paddingLeft="2dp"
+                    android:paddingTop="2dp"
+                    android:paddingRight="2dp"
                     app:ael_interpolator="accelerate"
                     app:ael_orientation="vertical"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="3dp">
 
                     <ScrollView
                         android:layout_width="match_parent"
@@ -486,16 +531,18 @@
                         <android.support.v7.widget.CardView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:elevation="20dp"
+                            android:elevation="5dp"
+                            android:layout_marginBottom="3dp"
                             app:cardCornerRadius="5dp"
-                            android:layout_marginTop="10dp">
+                            android:layout_marginTop="2dp">
 
                             <TableLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
                                 android:stretchColumns="*"
-                                android:padding="5dip"
+                                android:padding="1dip"
+                                android:background="@drawable/tablelayout"
                                 android:showDividers="middle"
                                 android:divider="?android:attr/dividerHorizontal">
 
@@ -504,7 +551,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="A.K. Singh,M.Tech."/>
+                                        android:text="A.K. Singh,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Associate Professor"
                                         android:paddingLeft="5dp"/>
@@ -514,7 +562,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Rabindra Kumar Singh,Ph.D."/>
+                                        android:text="Rabindra Kumar Singh,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Professor &amp; Head"
                                         android:paddingLeft="5dp"/>
@@ -524,7 +573,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Y.K. Mishra,M.Tech."/>
+                                        android:text="Y.K. Mishra,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Associate Professor"
                                         android:paddingLeft="5dp"/>
@@ -534,7 +584,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Ashok Kumar,M.Tech."/>
+                                        android:text="Ashok Kumar,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Associate Professor"
                                         android:paddingLeft="5dp"/>
@@ -544,7 +595,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Harsh Vikram Singh,Ph.D."/>
+                                        android:text="Harsh Vikram Singh,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Associate Professor"
                                         android:paddingLeft="5dp"/>
@@ -554,7 +606,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Som Pal Gangwar,M.Tech"/>
+                                        android:text="Som Pal Gangwar,M.Tech"
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -564,7 +617,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="R.K. Singh,Ph.D."/>
+                                        android:text="R.K. Singh,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Associate Professor"
                                         android:paddingLeft="5dp"/>
@@ -595,11 +649,12 @@
                     android:id="@+id/expandablelayout5_faculty"
                     android:background="@drawable/expandable_border"
                     app:ael_duration="400"
+                    android:layout_marginTop="4dp"
                     android:layout_below="@+id/faculty_mechanical_button_id"
                     app:ael_expanded="false"
                     app:ael_interpolator="accelerate"
                     app:ael_orientation="vertical"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="3dp">
 
                     <ScrollView
                         android:layout_width="match_parent"
@@ -617,7 +672,8 @@
                                 android:layout_height="match_parent"
                                 android:orientation="vertical"
                                 android:stretchColumns="*"
-                                android:padding="5dip"
+                                android:background="@drawable/tablelayout"
+                                android:padding="1dip"
                                 android:showDividers="middle"
                                 android:divider="?android:attr/dividerHorizontal">
 
@@ -626,7 +682,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="S.P. Kutar,M.Tech."/>
+                                        android:text="S.P. Kutar,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor &amp; Head"
                                         android:paddingLeft="5dp"/>
@@ -636,7 +693,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Akhilesh Kumar Chauhan,Ph.D."/>
+                                        android:text="Akhilesh Kumar Chauhan,Ph.D."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -646,7 +704,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Amit Medhavi,M.Tech."/>
+                                        android:text="Amit Medhavi,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -656,7 +715,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Anil Kumar,M.Tech."/>
+                                        android:text="Anil Kumar,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -666,7 +726,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Shashank Kumar,M.Tech."/>
+                                        android:text="Shashank Kumar,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -676,7 +737,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Ambuj Kumar,M.Tech"/>
+                                        android:text="Ambuj Kumar,M.Tech"
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -686,7 +748,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Rajnish Singh,M.Tech."/>
+                                        android:text="Rajnish Singh,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -696,7 +759,8 @@
                                     android:divider="?android:attr/dividerVertical"
                                     android:showDividers="middle">
                                     <TextView
-                                        android:text="Anshul Yadav,M.Tech."/>
+                                        android:text="Anshul Yadav,M.Tech."
+                                        android:paddingLeft="2dp"/>
                                     <TextView
                                         android:text="Assistant Professor"
                                         android:paddingLeft="5dp"/>
@@ -728,11 +792,14 @@
                     android:id="@+id/expandablelayout6_faculty"
                     android:background="@drawable/expandable_border"
                     app:ael_duration="400"
+                    android:layout_marginTop="4dp"
+                    android:paddingRight="2dp"
+                    android:paddingLeft="2dp"
                     android:layout_below="@+id/faculty_computer_button_id"
                     app:ael_expanded="false"
                     app:ael_interpolator="accelerate"
                     app:ael_orientation="vertical"
-                    android:layout_marginBottom="5dp">
+                    android:layout_marginBottom="10dp">
 
                     <ScrollView
                         android:layout_width="match_parent"
@@ -743,7 +810,8 @@
                             android:layout_height="match_parent"
                             android:elevation="20dp"
                             app:cardCornerRadius="5dp"
-                            android:layout_marginTop="10dp">
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginTop="2dp">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
@@ -764,8 +832,9 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="match_parent"
                                         android:orientation="vertical"
-                                        android:padding="5dip"
+                                        android:padding="1dip"
                                         android:stretchColumns="*"
+                                        android:background="@drawable/tablelayout"
                                         android:layout_marginBottom="5dp"
                                         android:showDividers="middle"
                                         android:divider="?android:attr/dividerHorizontal">
@@ -775,7 +844,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="B.P. Chaurasia,M.Tech."/>
+                                                android:text="B.P. Chaurasia,M.Tech."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Associate Professor"
                                                 android:paddingLeft="5dp"/>
@@ -785,7 +855,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Samir Srivastava,M.Tech."/>
+                                                android:text="Samir Srivastava,M.Tech."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Associate Professor"
                                                 android:paddingLeft="5dp"/>
@@ -795,7 +866,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Awadhesh Kumar,Ph.D."/>
+                                                android:text="Awadhesh Kumar,Ph.D."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Associate Professor"
                                                 android:paddingLeft="5dp"/>
@@ -805,7 +877,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Neelendra Badal,Ph.D."/>
+                                                android:text="Neelendra Badal,Ph.D."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Professor"
                                                 android:paddingLeft="5dp"/>
@@ -815,7 +888,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Aruni Singh,Ph.D."/>
+                                                android:text="Aruni Singh,Ph.D."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Assistant Professor"
                                                 android:paddingLeft="5dp"/>
@@ -825,7 +899,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Mrs. Suman Padney,Ph.D."/>
+                                                android:text="Mrs. Suman Padney,Ph.D."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Associate Professor"
                                                 android:paddingLeft="5dp"/>
@@ -835,7 +910,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Arvind Kumar Tiwari,Ph.D."/>
+                                                android:text="Arvind Kumar Tiwari,Ph.D."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Associate Professor"
                                                 android:paddingLeft="5dp"/>
@@ -859,7 +935,8 @@
                                         android:layout_height="match_parent"
                                         android:orientation="vertical"
                                         android:stretchColumns="*"
-                                        android:padding="5dp"
+                                        android:background="@drawable/tablelayout"
+                                        android:padding="1dp"
                                         android:layout_marginBottom="10dp"
                                         android:showDividers="middle"
                                         android:divider="?android:attr/dividerHorizontal">
@@ -869,7 +946,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="AmarendraSingh,Ph.D."/>
+                                                android:text="AmarendraSingh,Ph.D."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="System Manager"
                                                 android:paddingLeft="5dp"/>
@@ -879,7 +957,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Amit Shukla,M.Tech."/>
+                                                android:text="Amit Shukla,M.Tech."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Programmer"
                                                 android:paddingLeft="5dp"/>
@@ -889,7 +968,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Manoj Kumar,M.Tech."/>
+                                                android:text="Manoj Kumar,M.Tech."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Programmer"
                                                 android:paddingLeft="5dp"/>
@@ -912,9 +992,10 @@
                                         android:layout_height="match_parent"
                                         android:orientation="vertical"
                                         android:stretchColumns="*"
+                                        android:background="@drawable/tablelayout"
                                         android:layout_marginBottom="10dp"
                                         android:showDividers="middle"
-                                        android:padding="5dp"
+                                        android:padding="1dp"
                                         android:divider="?android:attr/dividerHorizontal">
 
                                         <TableRow
@@ -922,7 +1003,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="A.K. Malviya"/>
+                                                android:text="A.K. Malviya"
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Professor &amp; Head"
                                                 android:paddingLeft="5dp"/>
@@ -932,7 +1014,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="R.K. Singh,M.Tech."/>
+                                                android:text="R.K. Singh,M.Tech."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Associate Professor"
                                                 android:paddingLeft="5dp"/>
@@ -942,7 +1025,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="D.L. Gupta,Ph.D."/>
+                                                android:text="D.L. Gupta,Ph.D."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Associate Professor"
                                                 android:paddingLeft="5dp"/>
@@ -952,7 +1036,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Alka Singh,M.Tech."/>
+                                                android:text="Alka Singh,M.Tech."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Assistant Professor"
                                                 android:paddingLeft="5dp"/>
@@ -962,7 +1047,8 @@
                                             android:divider="?android:attr/dividerVertical"
                                             android:showDividers="middle">
                                             <TextView
-                                                android:text="Abhay Kumar Agarwal,Ph.D."/>
+                                                android:text="Abhay Kumar Agarwal,Ph.D."
+                                                android:paddingLeft="2dp"/>
                                             <TextView
                                                 android:text="Assistant Professor"
                                                 android:paddingLeft="5dp"/>

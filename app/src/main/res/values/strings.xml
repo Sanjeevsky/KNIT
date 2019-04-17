@@ -5,8 +5,11 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="navigation_open">Open Navigation Drawer</string>
     <string name="navigation_close">Close Navigation Drawer</string>
+    <string name="http">http://</string>
+    <string name="download">Download</string>
+    <string name="write_file">This app needs access to your file storage so that it can write files.</string>
     <string name="html"><![CDATA[<p>The general welfare of the students is looked after by the Dean of Students Welfare.<br/><br/>
-<h3><font color="#5F0D0D">Identity Card</h3>
+    <h3><font color="#5F0D0D">Identity Card</h3>
 <strong>(i) </strong>In order to enjoy the status and privileges of a bona fide student of the Institute, each
 student must obtain an Identity Card from the office of the Dean of Students Welfare at
 the time of registration or afterwards as per the notification.<br/>

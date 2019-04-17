@@ -173,7 +173,8 @@
                                     android:layout_height="wrap_content"
                                     android:stretchColumns="*"
                                     android:orientation="vertical"
-                                    android:padding="5dip"
+                                    android:padding="1dip"
+                                    android:background="@drawable/tablelayout"
                                     android:divider="?android:attr/dividerHorizontal"
                                     android:showDividers="middle">
 
@@ -187,6 +188,7 @@
                                             android:text="Branch"
                                             android:textColor="#131212"
                                             android:paddingRight="7dp"
+                                            android:paddingLeft="2dp"
                                             android:textStyle="bold" />
                                         <TextView
                                             android:text="Year"
@@ -209,7 +211,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Civil Engg."/>
+                                            android:text="Civil Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -226,7 +229,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Civil Engg."/>
+                                            android:text="Civil Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -241,7 +245,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Computer Sc. Engg."/>
+                                            android:text="Computer Sc. Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -256,7 +261,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Computer Sc. Engg."/>
+                                            android:text="Computer Sc. Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -271,7 +277,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Electrical Engg."/>
+                                            android:text="Electrical Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -286,7 +293,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Electrical Engg."/>
+                                            android:text="Electrical Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -301,7 +309,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Electronics Engg."/>
+                                            android:text="Electronics Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -316,7 +325,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Electronics Engg."/>
+                                            android:text="Electronics Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -331,7 +341,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Mechanical Engg."/>
+                                            android:text="Mechanical Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -346,7 +357,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Mechanical Engg."/>
+                                            android:text="Mechanical Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -361,7 +373,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Information Tech."/>
+                                            android:text="Information Tech."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -376,7 +389,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Information Tech."/>
+                                            android:text="Information Tech."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -391,7 +405,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="MCA"/>
+                                            android:text="MCA"
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -428,8 +443,9 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:stretchColumns="*"
+                                    android:background="@drawable/tablelayout"
                                     android:orientation="vertical"
-                                    android:padding="5dip"
+                                    android:padding="1dip"
                                     android:divider="?android:attr/dividerHorizontal"
                                     android:showDividers="middle">
 
@@ -443,6 +459,7 @@
                                             android:text="Branch"
                                             android:textColor="#131212"
                                             android:paddingRight="7dp"
+                                            android:paddingLeft="2dp"
                                             android:textStyle="bold" />
                                         <TextView
                                             android:text="Year"
@@ -465,7 +482,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Civil Engg."/>
+                                            android:text="Civil Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -482,7 +500,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Civil Engg."/>
+                                            android:text="Civil Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -497,7 +516,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Computer Sc. Engg."/>
+                                            android:text="Computer Sc. Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -512,7 +532,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Computer Sc. Engg."/>
+                                            android:text="Computer Sc. Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -527,7 +548,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Electrical Engg."/>
+                                            android:text="Electrical Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -542,7 +564,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Electrical Engg."/>
+                                            android:text="Electrical Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -557,7 +580,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Electronics Engg."/>
+                                            android:text="Electronics Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -572,7 +596,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Electronics Engg."/>
+                                            android:text="Electronics Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -587,7 +612,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Mechanical Engg."/>
+                                            android:text="Mechanical Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -602,7 +628,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Mechanical Engg."/>
+                                            android:text="Mechanical Engg."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>
@@ -617,7 +644,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Information Tech."/>
+                                            android:text="Information Tech."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="2nd"
                                             android:paddingLeft="4dp"/>
@@ -632,7 +660,8 @@
                                         android:showDividers="middle">
 
                                         <TextView
-                                            android:text="Information Tech."/>
+                                            android:text="Information Tech."
+                                            android:paddingLeft="2dp"/>
                                         <TextView
                                             android:text="3rd"
                                             android:paddingLeft="4dp"/>

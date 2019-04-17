@@ -1,11 +1,15 @@
 package com.example.sanjeevyadav.knit;
 
 import android.app.DownloadManager;
+import android.app.ProgressDialog;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Environment;
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.View;
 import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
@@ -15,11 +19,24 @@ import android.widget.ProgressBar;
 import android.graphics.Bitmap;
 import android.widget.Toast;
 
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import pub.devrel.easypermissions.EasyPermissions;
+
 public class webview_acticity extends AppCompatActivity {
 
     private WebView webView;
     private ProgressBar progressBar;
-    private String titleSet;
+    private String titleSet,urlopen;
     private Toolbar toolbar;
 
     @Override
@@ -41,6 +58,7 @@ public class webview_acticity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressbar_id);
         progressBar.setMax(100);
         Bundle bundle=getIntent().getExtras();
+        urlopen = bundle.getString("pdf");
         webView.getSettings().setJavaScriptEnabled(true);
         webView.getSettings().setLoadsImagesAutomatically(true);
         webView.setScrollBarStyle(View.SCROLLBARS_INSIDE_OVERLAY);
@@ -77,9 +95,10 @@ public class webview_acticity extends AppCompatActivity {
             webView.loadUrl(url);
         }
         else{
-            final String pdf=bundle.getString("pdf");
-            webView.loadUrl(pdf);
-            webView.setDownloadListener(new DownloadListener() {
+            final String url=bundle.getString("pdf");
+            //webView.loadUrl(url);
+            //Toast.makeText(webview_acticity.this,url,Toast.LENGTH_LONG).show();
+            /*webView.setDownloadListener(new DownloadListener() {
                 @Override
                 public void onDownloadStart(String url, String userAgent, String contentDisposition, String mimetype, long contentLength) {
                     DownloadManager.Request myrequest = new DownloadManager.Request(Uri.parse(url));
@@ -89,10 +108,10 @@ public class webview_acticity extends AppCompatActivity {
                             Environment.DIRECTORY_DOWNLOADS,".pdf").setTitle(titleSet);
                     DownloadManager mymanager = (DownloadManager) getSystemService(DOWNLOAD_SERVICE);
                     mymanager.enqueue(myrequest);
-                    Toast.makeText(webview_acticity.this,"Your File Is Downloading",Toast.LENGTH_LONG).show();
+                    //Toast.makeText(webview_acticity.this,"Your File Is Downloading",Toast.LENGTH_LONG).show();
                 }
-            });
-            finish();
+            });*/
+            //finish();
         }
     }
     @Override
@@ -103,4 +122,5 @@ public class webview_acticity extends AppCompatActivity {
         }
         super.onBackPressed();
     }
+
 }
