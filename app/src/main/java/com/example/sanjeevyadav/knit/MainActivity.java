@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         final String[] topic = {""};
 
         if (isFirstRun) {
+             int check = 0;
             //show start activity
             // setup the alert builder
             AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
