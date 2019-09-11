@@ -1,9 +1,10 @@
 package com.example.sanjeevyadav.knit;
 
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 
 public class viewHolder extends RecyclerView.ViewHolder {
 
