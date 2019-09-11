@@ -35,8 +35,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         toolbar= (Toolbar) findViewById(R.id.toolbar_id);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
-
-
         viewPager=(ViewPager) findViewById(R.id.viewPager_id);
         ViewPagerAdapter adapter=new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new MainFragment(),"Main");
