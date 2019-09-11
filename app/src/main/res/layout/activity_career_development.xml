@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".CareerDevelopmentActivity">
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_id_career"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -120,7 +120,7 @@
                 app:ael_orientation="vertical"
                 android:layout_marginBottom="5dp">
 
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:elevation="10dp"
@@ -702,7 +702,7 @@
 
                     </ScrollView>
 
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
 
@@ -731,7 +731,7 @@
                 app:ael_interpolator="accelerate"
                 app:ael_orientation="vertical"
                 android:layout_marginBottom="5dp">
-                <android.support.v7.widget.CardView
+                <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:elevation="10dp"
@@ -742,7 +742,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:id="@+id/internship_textview_id" />
-                </android.support.v7.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
             </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
         </RelativeLayout>

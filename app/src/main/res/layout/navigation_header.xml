@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="190dp"
+    android:layout_height="210dp"
     android:padding="16dp"
     android:gravity="bottom"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
@@ -11,23 +11,23 @@
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_marginLeft="65dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/knitlogo"
         android:contentDescription="Image"
-        android:scaleType="centerCrop" />
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        />
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Kamla Nehru Institute Of Technology"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginRight="8dp"
+        android:textAlignment="center"
         android:textStyle="bold"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sultanpur- 228118"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginRight="10dp"/>
+        android:textAlignment="center" />
 
 
 </LinearLayout>

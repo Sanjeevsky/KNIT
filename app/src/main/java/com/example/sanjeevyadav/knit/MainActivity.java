@@ -1,32 +1,27 @@
 package com.example.sanjeevyadav.knit;
 
-import android.app.AlertDialog;
-import android.content.Context;
-import android.content.DialogInterface;
+
 import android.content.Intent;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.design.widget.NavigationView;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.view.ViewPager;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
+
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.iid.FirebaseInstanceId;
-import com.google.firebase.iid.InstanceIdResult;
-import com.google.firebase.messaging.FirebaseMessaging;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.viewpager.widget.ViewPager;
+
+import com.google.android.material.navigation.NavigationView;
+import com.google.android.material.tabs.TabLayout;
+
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
-    android.support.v7.widget.Toolbar toolbar;
+    Toolbar toolbar;
     TabLayout tabLayout;
     ViewPager viewPager;
     NavigationView navigationView;
@@ -37,18 +32,16 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_drawer);
-        toolbar= (android.support.v7.widget.Toolbar) findViewById(R.id.toolbar_id);
+        toolbar= (Toolbar) findViewById(R.id.toolbar_id);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
-
-
-        viewPager=(ViewPager)findViewById(R.id.viewPager_id);
+        viewPager=(ViewPager) findViewById(R.id.viewPager_id);
         ViewPagerAdapter adapter=new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new MainFragment(),"Main");
         adapter.addFragment(new NewsFragment(),"News Updates");
 
         viewPager.setAdapter(adapter);
-        tabLayout=(TabLayout)findViewById(R.id.tabLayout_id);
+        tabLayout=(TabLayout) findViewById(R.id.tabLayout_id);
         tabLayout.setupWithViewPager(viewPager);
         drawerLayout=(DrawerLayout)findViewById(R.id.drawer_id);
         navigationView=(NavigationView)findViewById(R.id.navigation_view);

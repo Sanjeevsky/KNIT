@@ -1,49 +1,29 @@
 package com.example.sanjeevyadav.knit;
 
-import android.Manifest;
 import android.app.ProgressDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
-import com.google.firebase.FirebaseApp;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.URL;
-import java.net.URLConnection;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
-import java.util.zip.CheckedOutputStream;
 
-import pub.devrel.easypermissions.EasyPermissions;
 
 
 public class NewsFragment extends Fragment {
@@ -54,27 +34,28 @@ public class NewsFragment extends Fragment {
     List<DataHold> data;
     DatabaseReference databaseReference;
     Context context;
-    private ProgressDialog loadingBar;
     SwipeRefreshLayout swipeRefreshLayout;
+    View view;
+    private ProgressDialog loadingBar;
 
-        public NewsFragment() {
-        }
-        View view;
-        @Nullable
-        @Override
-        public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-            view=inflater.inflate(R.layout.fragment_news,container,false);
-            databaseReference=FirebaseDatabase.getInstance().getReference("newsfeeds");
-            databaseReference.keepSynced(true);
-            this.context=getContext();
-            return view;
-        }
+    public NewsFragment() {
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.fragment_news, container, false);
+        databaseReference = FirebaseDatabase.getInstance().getReference("newsfeeds");
+        databaseReference.keepSynced(true);
+        this.context = getContext();
+        return view;
+    }
 
     @Override
     public void onStart() {
         super.onStart();
-        context=getContext();
-        recyclerView=view.findViewById(R.id.recyclerview_id);
+        context = getContext();
+        recyclerView = view.findViewById(R.id.recyclerview_id);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(context));
         /*ConnectivityManager cm = (ConnectivityManager)context.getSystemService(context.CONNECTIVITY_SERVICE);
@@ -88,7 +69,7 @@ public class NewsFragment extends Fragment {
             Toast.makeText(context,"Your Device is not connected to Internet",Toast.LENGTH_LONG).show();
         }*/
         RefreshSection();
-        swipeRefreshLayout=view.findViewById(R.id.refreshh_layout_id_newsfeeds);
+        swipeRefreshLayout = view.findViewById(R.id.refreshh_layout_id_newsfeeds);
         swipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
@@ -111,31 +92,30 @@ public class NewsFragment extends Fragment {
     }
 
     private void RefreshSection() {
-        data=new ArrayList<>();
-        loadingBar=new ProgressDialog(context);
+        data = new ArrayList<>();
+        loadingBar = new ProgressDialog(context);
         loadingBar.create();
         loadingBar.setCanceledOnTouchOutside(false);
         loadingBar.setTitle("Loading...!!!");
         loadingBar.setMessage("Loading Data Please Wait...!!!");
-        databaseReference=FirebaseDatabase.getInstance().getReference("newsfeeds");
+        databaseReference = FirebaseDatabase.getInstance().getReference("newsfeeds");
         databaseReference.keepSynced(true);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                if(dataSnapshot.exists())
-                {
+                if (dataSnapshot.exists()) {
                     loadingBar.show();
-                    for(DataSnapshot dataSnap : dataSnapshot.getChildren())
-                    {
+                    for (DataSnapshot dataSnap : dataSnapshot.getChildren()) {
                         DataHold donorData = dataSnap.getValue(DataHold.class);
                         data.add(donorData);
                     }
                 }
-                recyclerAdapter = new recycler_adapter(data,context);
+                recyclerAdapter = new recycler_adapter(data, context);
                 recyclerView.setAdapter(recyclerAdapter);
                 loadingBar.dismiss();
             }
+
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 loadingBar.dismiss();
